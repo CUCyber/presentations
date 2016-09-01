@@ -10,7 +10,7 @@ all: reveal.js
 		$(GENERATE) -o $(THEME) -t $(TEMPLATE) $${file} $(OUTDIR)/$${file%.md}; \
 	done
 
-	cp -r reveal.js/{css,js,lib,plugin} $(OUTDIR)
+	rsync -av --delete reveal.js/{css,js,lib,plugin} $(OUTDIR)
 
 clean:
 	rm -rf $(OUTDIR)
