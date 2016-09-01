@@ -7,12 +7,16 @@ parser = argparse.ArgumentParser(description="generate HTML directory from revea
 parser.add_argument('-r', '--root', dest='root', default='/', help='reveal.js root in website')
 parser.add_argument('-o', '--theme', dest='theme', default='simple', help='reveal.js theme to use')
 parser.add_argument('-t', '--template', dest='template', default='template.html', help='template file to generate from')
+parser.add_argument('-a', '--res', dest='res', default='', help='resource folder for presentation')
 parser.add_argument('infile', default='presentation.md', help='input markdown file')
 parser.add_argument('outdir', default='.', help='output directory')
 
 args = parser.parse_args()
 
-os.makedirs(args.outdir, exist_ok=True)
+if os.path.exists(args.res):
+    shutil.copytree(args.res, args.outdir)
+else:
+    os.makedirs(args.outdir)
 
 shutil.copy(args.infile, args.outdir)
 
