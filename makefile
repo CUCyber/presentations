@@ -1,9 +1,8 @@
+OUTDIR='./public'
+ROOT='/presentations/'
+
 THEME='blood'
 TEMPLATE='./template.html'
-
-OUTDIR='./public'
-
-ROOT='/presentations/'
 
 GENERATE='./generate.py'
 
