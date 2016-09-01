@@ -2,7 +2,7 @@
 
 By: Mackenzie Binns & Foster McLane
 
-For CU Cyber
+CU Cyber
 
 
 ## You Can Find These Presentations Online
