@@ -59,19 +59,26 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 * a suite of protocols for identification and addressing of connected computers
 
-* IPv4 - IP version 4
-	- has a 32-bit address block (4 billion addresses)
-	- private and public addresses
-		+ private - 192.168.1.1
-		+ public - 130.127.151.120
-* IPv6 - IP version 6
-	- has a 128-bit address block (a bunch of addresses)
-	- 2001:db8::1
-
 * subnet - a block of IP space
+
+
+#### IPv4 - IP Version 4
+
+* has a 32-bit address block (4 billion addresses)
+* private and public addresses
+	- private - 192.168.1.1
+	- public - 130.127.151.120
 
 Note:
 We've run out of IPv4 addresses because they were handed out in large blocks. We use black magic (a.k.a. NAT) to keep everything working.
+
+
+#### IPv6 - IP Version 6
+
+* has a 128-bit address block (a bunch of addresses)
+* 2001:db8::1
+
+Note:
 IPv6 address space is larger than visible stars in the universe. Explain double colons for IPv6 address.
 
 
@@ -122,12 +129,18 @@ Encapsulation is key here! Every layer is enveloped by the lower layer.
 	- getting data to the physical layer (i.e. ethernet cat-6 cabling)
 	- error detection
 	- hardware addressing (i.e. framing)
-* Media Access Control (MAC) sublayer
-	- defines MAC addresses
-	- controls access to network media (e.g. network drive)
-* Local Link Control (LLC) sublayer
-	- does error and flow control
-	- handles layer 2 congestion
+
+
+#### Media Access Control (MAC) Sublayer
+
+* defines MAC addresses
+* controls access to network media (e.g. network drive)
+
+
+#### Local Link Control (LLC) Sublayer
+
+* does error and flow control
+* handles layer 2 congestion
 
 
 ### Layer 3 - TCP/IP Layer
