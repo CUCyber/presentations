@@ -45,7 +45,6 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * nmap
 * ss
 * ip
-* arp
 
 
 
