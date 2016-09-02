@@ -198,7 +198,7 @@ Explain SYN, SYN-ACK, ACK.
 * realtime and orderless
 
 Note:
-IP is a connectionless protocol.
+UDP is a connectionless protocol.
 For Netflix because it is realtime video streaming.
 Why a connectionless (something that doesn't guarantee your message gets there) is good for Netflix? Use frame numbers in explanation.
 
