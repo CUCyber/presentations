@@ -305,7 +305,6 @@ Use the 'ip neighbour' command to view your ARP cache.
 
 * 'ip neighbour'
 * 'ip n'
-* 'ip n flush'
 * 'ip n show dev wlp8s0'
 
 
