@@ -6,6 +6,8 @@ TEMPLATE='./template.html'
 
 GENERATE='./generate.py'
 
+WEBSITE='../website'
+
 all: reveal.js
 	for file in `find . \( -path './reveal.js' -o -path './public' \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print`; do \
 		rm -rf $(OUTDIR)$(ROOT)/$${file%.md}; \
@@ -17,10 +19,16 @@ all: reveal.js
 serve: all
 	cd public; python3 -m http.server
 
+update: all
+	rsync -av --delete public$(ROOT) $(WEBSITE)$(ROOT)
+	git -C $(WEBSITE) add .$(ROOT)
+	git -C $(WEBSITE) commit -m "update presentations"
+	git -C $(WEBSITE) push
+
 clean:
 	rm -rf $(OUTDIR)
 
 reveal.js:
 	git submodule update --init --recursive
 
-.PHONY: all serve clean
+.PHONY: all serve update clean
