@@ -14,10 +14,13 @@ all: reveal.js
 
 	rsync -av --delete reveal.js/{css,js,lib,plugin} $(OUTDIR)$(ROOT)
 
+serve: all
+	cd public; python3 -m http.server
+
 clean:
 	rm -rf $(OUTDIR)
 
 reveal.js:
 	git submodule update --init --recursive
 
-.PHONY: all clean
+.PHONY: all serve clean
