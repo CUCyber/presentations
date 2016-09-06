@@ -73,20 +73,20 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 ### Import-CSV
 
 * Pulls in well formatted CSV files and creates objects with properties based off the first row data (column headers) and all data following will be lined up and matching
-* If you need a CSV from an excel file you can export to csv from within excel
-*PowerShell is AMAZING for Csv files, please do not use VBS for csv please take the time to learn PowerShell
+* If you need a CSV from an Excel file you can export to CSV from within Excel
+*PowerShell is AMAZING for CSV files, please do not use VBS for CSV please take the time to learn PowerShell
 
 
 ### Export-CSV
 
-* This allows you to take and collection of objects and create a csv file
+* This allows you to take and collection of objects and create a CSV file
 * First row column headers will be the properties the objects share and the data will be put under that
 * Use –notypeinformation flag to remove system messages from output
 
 
 ### ConvertTo-CSV
 
-* This allows you to convert your data into a csv right into memory with no need to output to a file
+* This allows you to convert your data into a CSV right into memory with no need to output to a file
 * Use –notypeinformation flag to remove system messages from output
 
 
@@ -106,18 +106,18 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 
 
 
-## Pipelining
+# Pipelining
 
 
-### Basics
+## Basics
 
 * '|' is the pipe operator in PowerShell this allows you to pass the output of one operation directly into another
 
 
-### Common Pipes
+## Common Pipes
 
 
-#### Where-Object
+### Where-Object
 
 * Allows you to filter an object based on a condition such as
 
@@ -126,20 +126,20 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 ```
 
 
-#### Select
+### Select
 
 * Allows you to select a specific property of an object to use
 * This is good to use if you have a ton of properties and only need a few (Active Directory has a lot of properties)
 
 
-#### Select-Object
+### Select-Object
 
 * This allows you to preform operations on a specific property of an object while still selecting the whole object
 * Not to be confused with the simple select which isolates the specific property
 * This is good for operating on column names if you need to change them and also for doing operations on all instances of that property
 
 
-#### Select-Object (cont.)
+### Select-Object (cont.)
 
 * The example below would append 'Hi' to any property you want also allowing you to rename the header
 
@@ -148,66 +148,72 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 ```
 
 
-#### Sort
+### Sort
 
 * Sorts an object by a specified property, default is ascending
 
 
-#### Almost every other native PowerShell module can have piped input
+### Almost every other native PowerShell module can have piped input
 
 * Give it a whirl, you can pipe output into most modules, in fact many Require you to do so
 
 
-### Accessing data that has been piped in
+## Accessing data that has been piped in
 
 * To access data that you are piping in use the system defined variable `$_`
 * `$_` is still the complete object you defined to pass in
 
 
-### Accessing data not piped in
+## Accessing data not piped in
 
 * Just reference the variable as normal
 * Keep experimenting with this one as it can allow you to do many operations quickly and is a key feature of PowerShell
 
 
 
-## .NET Objects
+# .NET Objects
+
+
+## Basics
 
 * PowerShell has full access to the whole .NET framework of objects, classes, and functions
 
 
 
-## Error Handling
+# Error Handling
+
+
+## Basics
 
 * Wrap functions and modules in try/catch statements when you want to handle the potential errors
 * `$?` Is the system variable for the last error thrown and can be accessed like any other object
 
 
 
-## String Operations
+# String Operations
 
 
-### Basics
+## Basics
 
 * The concatenation operator is `+`
 
 
-### Variables
+## Variables
 
 * When working with variables in strings there are two ways to expand it to show your properties
 
 
-#### $variable
+### $variable
 
 * `$variable` will give you the data in the variable
 
 
-#### $variable.name
+### $variable.name
 
 * `$variable.name` will throw an error because PowerShell does not know that the .name property is part of the variable
 
 
-#### <span class="tex2jax_ignore">$($variable.name)</span>
+### <span class="tex2jax_ignore">$($variable.name)</span>
 
 * <code class="tex2jax_ignore">$($variable.name)</code> will show you what is contained in the variables name property correctly
 	- This works because when you surround something in `$()` you are saying whatever happens in the parenthesis is a variable and to treat it as such, but you also have to reference the variables you want to work with as variables with in the parenthesis as well
@@ -216,64 +222,65 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 
 ## Numbers and Strings
 
-* When working with numbers and strings while trying to concatenate don’t forget to use the `.ToString()` operator on your number otherwise you will get funny results!
+* When working with numbers and strings while trying to concatenate don't forget to use the `.ToString()` operator on your number otherwise you will get funny results!
 
 
 
-## Operators
-
-* This is not a comprehensive list, but some common ones
+# Common Operators
 
 
-### –eq
+## –eq
 
 * Equals, use this when testing for logic and not assignment
 
 
-### –like
+## –like
 
-* This operator allows you to use the * wildcard in a string when looking for something
+* This operator allows you to use the `*` wildcard in a string when looking for something
 
 
-### –match
+## –match
 
-* This operator allows you to use regex expressions to find patterns, very useful when parsing data in csv’s or excel docs
+* This operator allows you to use regex expressions to find patterns, very useful when parsing data in CSV's or Excel docs
 * Uses Perl RegEx
 
 
-### –contains
+## –contains
 
 * Looks for a string within a string
 * This operator does not do operations against a string; it only operates on a list. That is, it answers the question "does this list contain a given element?" To check for a whole or partial string match use `-like` or `-match`
 
 
-### –ne
+## –ne
 
 * Not equal to
 
 
-### –notlike
+## –notlike
 
 * Can use wild cards to find objects that are NOT like when you put in the search
 
 
-### –gt
+## –gt
 
 * Greater than operator, can be used on Strings and will sort them ascending
 
 
-### –lt
+## –lt
 
 * Less than operator, can be used on string and will sort them descending
 
 
 
-## SQL Connections
+# SQL Connections
+
+
+## Basics
 
 * You want to create global variables for SQL data object so you do not have to go through your whole script hunting down everyplace you referenced a table or database
 
 
-### Invoke-SQLCmd
+## Invoke-SQLCmd
 
 * `-serverinstance`
 	- This is the SQLserver name
@@ -285,17 +292,17 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 		+ See string operations for using PowerShell variables inside sql statements
 
 
-### Invoke SQL
+## Invoke SQL
 
 * Invoke SQL is the simplest way to access a sql database but it is also low performance and would take many hours to operate on something in the thousands
 
 
-### High Performance SQL
+## High Performance SQL
 
 * There is no need to edit this following block of code, typically plug and play (You should make it a function and pass variables in)
 
 
-#### Define Your CSV Variables
+### Define Your CSV Variables
 
 ```powershell
 $csvdelimiter = "`t"
@@ -307,13 +314,37 @@ $csvfile = <Location of CSV file to export to sql>
 * Data types MUST be able to accommodate the data, most robust is nvarchar with an appropriate length
 
 
-#### Define Your SQL Variables
+### Define Your SQL Variables
 
 ```powershell
 $sqlCommand
 $sqlserver
 $database
 ```
+
+
+
+# Additional Resources
+
+
+## PowerShell Characters and Tokens
+
+* http://www.neolisk.com/techblog/powershell-specialcharactersandtokens
+
+
+## PowerShell Error Handling
+
+* https://blogs.msdn.microsoft.com/kebab/2013/06/09/an-introduction-to-error-handling-in-powershell/
+
+
+## PowerShell Pitfalls
+
+* https://www.simple-talk.com/sysadmin/powershell/the-poster-of-the-plethora-of-powershell-pitfalls/
+
+
+## PowerShell + SQL
+
+* https://rahmanagoro.wordpress.com/2010/08/26/powershell-secret-timeout-running-sql-from-powershell-v1/
 
 
 
