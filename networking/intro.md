@@ -313,3 +313,7 @@ Use the 'ip neighbour' command to view your ARP cache.
 * 'ip route'
 * 'ip r'
 * 'ip r add default via 192.168.1.1 dev wlp80s0'
+
+
+
+# Questions?
