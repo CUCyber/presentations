@@ -17,13 +17,17 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## Privilege Errors
 
 
-* Administrator Mode - Modifying the user privileges will error when the current PowerShell or PowerShell ISE are not run as Administrator, see image below
+### Administrator Mode
+
+* Modifying the user privileges will error when the current PowerShell or PowerShell ISE are not run as Administrator, see image below
 	- Right-click and select run as administrator when starting the PowerShell application.
 
 ![Execution Policy Change](img1.png)
 
 
-* Execution Policy – Running the tool will error when the current PowerShell or PowerShell ISE are run using the default execution policy, see image below
+### Execution Policy
+
+* Running the tool will error when the current PowerShell or PowerShell ISE are run using the default execution policy, see image below
 	- Update the default execution policy administrator mode by typing: `Set-Execution policy undefined`
 
 ![Execution Policy Error](img2.png)
