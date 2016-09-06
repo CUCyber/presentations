@@ -42,6 +42,7 @@
 		<script src="{root}js/reveal.js"></script>
 		<script>
 			Reveal.initialize({{
+				history: true,
 				dependencies: [
 					// classList shim
 					{{ src: '{root}lib/js/classList.js', condition: function() {{ return !document.body.classList; }} }},
