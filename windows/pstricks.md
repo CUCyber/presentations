@@ -78,7 +78,7 @@ Get-ADGroup –server <Domain> -properties <AD Property you want> `
 
 * Pulls in well formatted CSV files and creates objects with properties based off the first row data (column headers) and all data following will be lined up and matching
 * If you need a CSV from an Excel file you can export to CSV from within Excel
-*PowerShell is AMAZING for CSV files, please do not use VBS for CSV please take the time to learn PowerShell
+* PowerShell is AMAZING for CSV files, please do not use VBS for CSV but rather take the time to learn PowerShell
 
 
 ### Export-CSV
