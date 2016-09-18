@@ -26,6 +26,11 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ![How you feel after learning reverse engineering](iamagod.png)
 
+Note:
+* There are different cases for analyzing binaries. Programmers use it for debugging, while security experts use it for analyzing malware.
+* Static analysis is when binary is not executed, while dynamic is the opposite.
+* Static analysis is useful to gain easy information before dynamic analysis and to get detailed information after dynamic analysis.
+
 
 ## Strings
 
@@ -41,6 +46,10 @@ $FreeBSD: src/bin/ls/util.c,v 1.38 2005/06/03 11:05:58 dd Exp $
 bin/ls
 Unix2003
 ```
+
+Note:
+* Look for human-readable values in binary
+* Show them the real life example
 
 
 
@@ -58,6 +67,13 @@ $ objdump -D /bin/sh | less
 0x100001a5f   eb0a          jmp 0x100001a6b
 ```
 
+Note:
+* Assembly is the instructions run on the CPU to execute a process.
+* Assembly is a programming language.
+* Logic can be reversed, names of variables cannot.
+* objdump example
+* We will be using intel assembly. This just means that variables typically move from right to left (e.g. `mov eax, 0x9`).
+
 
 ## Introduction to Intel assembly - How is member stored?
 
@@ -71,6 +87,12 @@ $ objdump -D /bin/sh | less
     ```
 * Things in brackets are evaluated. These are typically memory addresses.
 
+Note:
+* Registers are fast, ram is not.
+* `mov` moves data from one place to another.
+* The syntax for moving data to and from registers is very simple `mov eax, 0x9`. Define value and register
+* The syntax for moving data to and from ram is harder `mov dword[ebp-0xc], 0x9`. We need to define size, location, and value
+
 
 ## Registers
 
@@ -80,6 +102,21 @@ $ objdump -D /bin/sh | less
 * Specific purpose registers
 	- `eip` - Instruction Pointer
 	- `eflags` - Process
+
+Note:
+* GPRs can have any value stored in them.
+* `eax` is used for arithmetic.
+* Spefific purpose registers control function in a process. Don't mess with them.
+   - 'eip' tell CPU what instruction what to execute next.
+   - EFLAGS are 32 bits of binary numbers that tell the "state" of the processor.
+```
+|-------|
+|       |
+|       |
+|    ---|--- mov dword[ebp-0x4], 0x4 == int x = 4
+|       |
+|-------| <- ebp
+```
 
 
 ## Important Instructions
@@ -94,6 +131,11 @@ $ objdump -D /bin/sh | less
 * `inc x`
 * `dec x`
 
+Note:
+* We have seen `mov` before.
+* `add`, `imul`, `sub` all follow similar patterns.
+* `idiv` takes eax and divides it by `idiv`'s arg. Stores in `eax` in `edx`.
+
 
 ## Simple Assembly
 
@@ -106,6 +148,9 @@ $ objdump -D /bin/sh | less
 0x6   add eax, edx
 0x7   mov dword [ebp-0x14], eax
 ```
+
+Note:
+Left side is address, right side is command
 
 
 ## C Equivalent
@@ -128,6 +173,10 @@ total = x + y;
 * `jgt [address]`
 * `jle [address]`
 * `ret`
+
+Note:
+* `jmp` changes `eip` to address
+* `cmp` subtracts x from y and sets EFLAGS to let the compiler know which value is greater, less, or the same.
 
 
 ## Compare and Jump Assembly
@@ -227,7 +276,7 @@ $ r2 ./IOLI-crackme/bin-linux/crackme0x00
 > V             # Enter visual mode
     > p         # Go to the next screen
     > {h,j,k,l} # Move around (vim keybindings!)
-    > .         # Go to EIP
+    > .         # Go to 'eip'
 > VV            # Function viewer
 > q             # Quit to visual mode
 > q             # Quit visual mode
