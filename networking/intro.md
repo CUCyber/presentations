@@ -151,9 +151,9 @@ Encapsulation is key here! Every layer is enveloped by the lower layer.
 * uses addresses to communicate
 
 Note:
-Route selection finds the "best" path, not necessarily the shortest path.
-Higher layers (than 3) determine format and further structuring.
-Where layer 2 uses MAC addressing, layer 3 uses IP addressing. (lead-in to ARP later)
+* Route selection finds the "best" path, not necessarily the shortest path.
+* Higher layers (than 3) determine format and further structuring.
+* Where layer 2 uses MAC addressing, layer 3 uses IP addressing. (lead-in to ARP later)
 
 
 ### Layer 4 - Transport Layer
@@ -169,8 +169,8 @@ Where layer 2 uses MAC addressing, layer 3 uses IP addressing. (lead-in to ARP l
 	- takes requests from users and applications to lower layers (sender side)
 
 Note:
-Sender works from top down; receiver works from bottom up.
-What kind of processes do you think appear here? Chrome and Word do not live here, but it does include applications that allow Chrome and Word to access networked information.
+* Sender works from top down; receiver works from bottom up.
+* What kind of processes do you think appear here? Chrome and Word do not live here, but it does include applications that allow Chrome and Word to access networked information.
 
 
 ## TCP vs. UDP
@@ -184,10 +184,10 @@ What kind of processes do you think appear here? Chrome and Word do not live her
 * increased network overhead
 
 Note:
-TCP "guarantees" delivery of information.
-Explain what stream based means. Note that it is not Netflix.
-Why would TCP have increased network overhead? TCP has a 14 header blocks and a 20 byte header
-Explain SYN, SYN-ACK, ACK.
+* TCP "guarantees" delivery of information.
+* Explain what stream based means. Note that it is not Netflix.
+* Why would TCP have increased network overhead? TCP has a 14 header blocks and a 20 byte header
+* Explain SYN, SYN-ACK, ACK.
 
 
 ### UDP - User Datagram Protocol
@@ -198,9 +198,9 @@ Explain SYN, SYN-ACK, ACK.
 * realtime and orderless
 
 Note:
-UDP is a connectionless protocol.
-For Netflix because it is realtime video streaming.
-Why a connectionless (something that doesn't guarantee your message gets there) is good for Netflix? Use frame numbers in explanation.
+* UDP is a connectionless protocol.
+* For Netflix because it is realtime video streaming.
+* Why a connectionless (something that doesn't guarantee your message gets there) is good for Netflix? Use frame numbers in explanation.
 
 
 
@@ -213,8 +213,8 @@ Why a connectionless (something that doesn't guarantee your message gets there) 
 * your default gateway is where your computer sends its packets
 
 Note:
-That other network is almost always a wide area network (WAN)
-Show 'ip route' output.
+* That other network is almost always a wide area network (WAN)
+* Show 'ip route' output.
 
 
 ## Home vs. Enterprise
@@ -255,8 +255,8 @@ For now, just remember that it can translate a human-readable form to an IP addr
 * a layer 2 protocol
 
 Note:
-When a system attempts to connect to another host. It uses the IP address to determine if it's on the local network (remember CIDR notation and subnetting). If so, it looks at the ARP cache to find the MAC address of the system and uses that to communicate. If the ARP table does not hold the IP address, your computer sends a broadcast message and a computer with that IP address may respond.
-Use the 'ip neighbour' command to view your ARP cache.
+* When a system attempts to connect to another host. It uses the IP address to determine if it's on the local network (remember CIDR notation and subnetting). If so, it looks at the ARP cache to find the MAC address of the system and uses that to communicate. If the ARP table does not hold the IP address, your computer sends a broadcast message and a computer with that IP address may respond.
+* Use the 'ip neighbour' command to view your ARP cache.
 
 
 
