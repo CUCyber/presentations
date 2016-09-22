@@ -8,7 +8,7 @@ GENERATE='./generate.py'
 
 WEBSITE='../website'
 
-all: reveal.js
+all: reveal.js/js
 	for file in `find . \( -path './reveal.js' -o -path $(OUTDIR) \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print`; do \
 		rm -rf $(OUTDIR)$(ROOT)/$${file%.md}; \
 		$(GENERATE) -r $(ROOT) -o $(THEME) -t $(TEMPLATE) -a $${file%.md}.res $${file} $(OUTDIR)$(ROOT)$${file%.md}; \
@@ -28,7 +28,7 @@ update: all
 clean:
 	rm -rf $(OUTDIR)
 
-reveal.js:
+reveal.js/js:
 	git submodule update --init --recursive
 
 .PHONY: all serve update clean
