@@ -8,10 +8,10 @@ GENERATE='./generate.py'
 
 WEBSITE='../website'
 
-all: reveal.js/js
+all: reveal
 	for file in `find . \( -path './reveal.js' -o -path $(OUTDIR) \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print`; do \
 		rm -rf $(OUTDIR)$(ROOT)/$${file%.md}; \
-		$(GENERATE) -r $(ROOT) -o $(THEME) -t $(TEMPLATE) -a $${file%.md}.res $${file} $(OUTDIR)$(ROOT)$${file%.md}; \
+		$(GENERATE) -i $$(echo $${file%.md} | cut -c3-) -r $(ROOT) -o $(THEME) -t $(TEMPLATE) -a $${file%.md}.res $${file} $(OUTDIR)$(ROOT)$${file%.md}; \
 	done
 
 	mkdir -p $(OUTDIR)$(ROOT)/reveal
@@ -30,7 +30,11 @@ update: all
 clean:
 	rm -rf $(OUTDIR)
 
-reveal.js/js:
+reveal: reveal.js/lib
+
+reveal.js/lib:
 	git submodule update --init --recursive
 
-.PHONY: all serve update clean
+	wget -O reveal.js/lib/js/socket.io.js https://cdn.socket.io/socket.io-1.4.8.js
+
+.PHONY: all serve update clean reveal
