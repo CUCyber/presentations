@@ -114,7 +114,7 @@
 
 				xhr.onreadystatechange = function () {{
 					if (xhr.readyState === XMLHttpRequest.DONE) {{
-						if (xhr.status === 200)
+						if (xhr.status === 200 || xhr.status === 304)
 							multiplex['id'] = xhr.responseText;
 						else
 							multiplex['enabled'] = false
