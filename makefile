@@ -35,6 +35,8 @@ reveal: reveal.js/lib
 reveal.js/lib:
 	git submodule update --init --recursive
 
+	sed -i -e 's/^\(\s*url:.*\)window\.location\.search/\1window.location.hash/g' reveal.js/plugin/notes/notes.js
+
 	wget -O reveal.js/lib/js/socket.io.js https://cdn.socket.io/socket.io-1.4.8.js
 
 .PHONY: all serve update clean reveal
