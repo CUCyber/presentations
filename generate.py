@@ -4,6 +4,7 @@ import os
 import shutil
 
 parser = argparse.ArgumentParser(description="generate HTML directory from reveal.js Markdown source")
+parser.add_argument('-i', '--id', dest='id', default='presentation', help='reveal.js id in website')
 parser.add_argument('-r', '--root', dest='root', default='/', help='reveal.js root in website')
 parser.add_argument('-o', '--theme', dest='theme', default='simple', help='reveal.js theme to use')
 parser.add_argument('-t', '--template', dest='template', default='template.html', help='template file to generate from')
@@ -32,4 +33,4 @@ with open(os.path.join(args.outdir, 'index.html'), 'w') as index:
 
         title.strip()
 
-        index.write(template.read().format(title=title, root=args.root, theme=args.theme, presentation=os.path.basename(args.infile)))
+        index.write(template.read().format(id=args.id, title=title, root=args.root, theme=args.theme, presentation=os.path.basename(args.infile)))
