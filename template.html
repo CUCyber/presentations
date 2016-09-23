@@ -83,7 +83,10 @@
 				if (multiplex['enabled']) {{
 					// multiplex
 					dependencies.push({{ src: '{root}reveal/lib/js/socket.io.js', async: true }});
-					dependencies.push({{ src: '{root}reveal/plugin/multiplex/master.js', async: true }});
+					if (multiplex['secret'] === null)
+						dependencies.push({{ src: '{root}reveal/plugin/multiplex/client.js', async: true }});
+					else
+						dependencies.push({{ src: '{root}reveal/plugin/multiplex/master.js', async: true }});
 				}}
 
 				// create reveal options
