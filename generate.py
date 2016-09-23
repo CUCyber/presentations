@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import argparse
 import os
+import os.path
 import shutil
+import urllib.parse
 
 parser = argparse.ArgumentParser(description="generate HTML directory from reveal.js Markdown source")
 parser.add_argument('-i', '--id', dest='id', default='presentation', help='reveal.js id in website')
@@ -33,4 +35,4 @@ with open(os.path.join(args.outdir, 'index.html'), 'w') as index:
 
         title.strip()
 
-        index.write(template.read().format(id=args.id, title=title, root=args.root, theme=args.theme, presentation=os.path.basename(args.infile)))
+        index.write(template.read().format(id=urllib.parse.quote(args.id, safe=''), title=title, root=urllib.parse.quote(args.root), theme=args.theme, presentation=os.path.basename(args.infile)))
