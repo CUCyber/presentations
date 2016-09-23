@@ -76,8 +76,7 @@
 
 				if (multiplex['enabled']) {{
 					// multiplex
-						// TODO: download socket.io.js from makefile
-					dependencies.push({{ src: '//cdn.socket.io/socket.io-1.4.8.js', async: true }});
+					dependencies.push({{ src: '{root}reveal/lib/js/socket.io.js', async: true }});
 					dependencies.push({{ src: '{root}reveal/plugin/multiplex/master.js', async: true }});
 				}}
 
@@ -118,7 +117,7 @@
 					}}
 				}};
 
-				xhr.open('GET', multiplex['server'] + '/id', true);
+				xhr.open('GET', multiplex['server'] + '/id?presentation={id}', true);
 
 				xhr.send();
 			}}
