@@ -14,7 +14,9 @@ all: reveal.js/js
 		$(GENERATE) -r $(ROOT) -o $(THEME) -t $(TEMPLATE) -a $${file%.md}.res $${file} $(OUTDIR)$(ROOT)$${file%.md}; \
 	done
 
-	rsync -av --delete reveal.js/{css,js,lib,plugin} $(OUTDIR)$(ROOT)
+	mkdir -p $(OUTDIR)$(ROOT)/reveal
+
+	rsync -av --delete reveal.js/{css,js,lib,plugin} $(OUTDIR)$(ROOT)/reveal
 
 serve: all
 	cd $(OUTDIR); python3 -m http.server
