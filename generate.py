@@ -28,11 +28,11 @@ with open(os.path.join(args.outdir, 'index.html'), 'w') as index:
         with open(args.infile, 'r') as presentation:
             title = presentation.readline()
 
-        title.strip()
+        title = title.strip()
 
         if title[0] == '#':
             title = title[1:]
 
-        title.strip()
+        title = title.strip()
 
         index.write(template.read().format(id=urllib.parse.quote(args.id, safe=''), title=title, root=urllib.parse.quote(args.root), theme=args.theme, presentation=os.path.basename(args.infile)))
