@@ -68,7 +68,7 @@
 					{{ src: '{root}reveal/plugin/markdown/markdown.js', condition: function() {{ return !!document.querySelector('[data-markdown]'); }} }},
 
 					// syntax highlight for <code> elements
-					{{ src: '{root}reveal/plugin/highlight/highlight.js', async: true, callback: function() {{ hljs.initHighlightingOnLoad(); }} }},
+					{{ src: '{root}reveal/plugin/highlight/highlight.js', async: true, callback: function() {{ hljs.initHighlighting(); }} }},
 
 					// zoom in and out with alt+click
 					{{ src: '{root}reveal/plugin/zoom-js/zoom.js', async: true }},
