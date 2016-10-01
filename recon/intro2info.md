@@ -18,7 +18,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 * Why is information gathering important?
 * What should you be looking for?
-* How to orgainize your information.
+* How to organize your information.
 * What tools are there to help you find things?
 
 
@@ -29,9 +29,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 * You don't know what you don't know
 * Increases surface area for attack
-* Gives you the ability to orgainize an attack more effectively
+* Gives you the ability to organize an attack more effectively
 
-Note: 
+Note:
 * You never know when a bit of information will be handy!
 
 
@@ -43,7 +43,7 @@ Note:
 * How an action would impact your network and the domino effect that follows
 
 Note:
-* Knowing what/who is on your network allows you to respond more quickly 
+* Knowing what/who is on your network allows you to respond more quickly
 
 
 ### Example
@@ -63,11 +63,11 @@ Note:
 
 * You should be recording everything
 * Even small details can be important
-* Overwhelmed? Orgainization is your friend
+* Overwhelmed? Organization is your friend
 
 Note:
 * Details all the way down to what is someone's favorite color can be important (Password cracking)
-* Use tools to help you orgainize thoughts: OneNote, Good naming conventions, well thought out groupings of information.
+* Use tools to help you organize thoughts: OneNote, Good naming conventions, well thought out groupings of information.
 
 
 ## Thing 1...Thing n
@@ -95,10 +95,10 @@ Note:
 
 
 
-# Get Orgainized
+# Get Organized
 
 
-## Tools for Orgainization
+## Tools for Organization
 
 * OneNote (Windows)
 * Evernote/Google Keep
@@ -111,7 +111,7 @@ Note:
 ## Tips for use
 
 * Make sure to categorize your data well
-* Dont just stick everything in one document
+* Don't just stick everything in one document
 * Keep data up to date
 * Use tags to speed up searching #findme
 
@@ -149,7 +149,7 @@ Note:
 
 ## Nmap
 * Nmap is a great too for enumerating your network and finding devices and services that are running
-* nmap -A 10.20.18.25 (to start) 
+* nmap -A 10.20.18.25 (to start)
 
 
 ## Dmitry
@@ -172,14 +172,14 @@ Note:
 Note:
 * Versioning of software
 * ssh versioning:
-* use auxiliary/scanner/ssh/ssh_version
+* use auxiliary/scanner/ssh/ssh\_version
 * set RHOST
 * run
 
 
 ## Nikto
 * A great starting tool for gathering information on webservers
-* Gives alot of information on webservers 
+* Gives a lot of information on webservers
 
 Note:
 * Nikto -h 10.20.18.25
