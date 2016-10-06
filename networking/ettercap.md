@@ -36,13 +36,17 @@ Ettercap has very strong Red and very strong Blue reasons for existing. We will 
 * TLS stripping
 
 Note:
-We are going to demonstrate ARP cache poisoning, DNS spoofing, and TLS stripping
+We are going to demonstrate ARP cache poisoning, DNS spoofing, and TLS stripping.
 
 
 ## How do I install it?
 
 * `ettercap` package in most distros (`ettercap-gtk` in Arch and `ettercap-graphical` in Ubuntu)
 * https://ettercap.github.io/ettercap/
+
+```sh
+$ ettercap -G
+```
 
 
 
@@ -55,7 +59,7 @@ We are going to demonstrate ARP cache poisoning, DNS spoofing, and TLS stripping
 * stateless per the standard
 
 Note:
-It is the cache that nodes and switches on a network keep
+It is the cache that nodes and switches on a network keep.
 
 
 ## What does poisoning it mean?
