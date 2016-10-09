@@ -15,12 +15,7 @@ all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 serve: all
 	cd "$(OUTDIR)"; python3 -m http.server
 
-update: all
-	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(ROOT)"
-
-	git -C "$(WEBSITE)" add ".$(ROOT)"
-	git -C "$(WEBSITE)" commit -m "update presentations"
-	git -C "$(WEBSITE)" push
+update: $(WEBSITE)$(ROOT)
 
 clean:
 	rm -rf "$(OUTDIR)"
@@ -46,5 +41,12 @@ $(OUTDIR)$(ROOT)reveal: reveal.js/lib
 	rsync -av --delete reveal.js/{css,js,lib,plugin} "$(OUTDIR)$(ROOT)"reveal
 
 	touch $(OUTDIR)$(ROOT)
+
+$(WEBSITE)$(ROOT): $(OUTDIR)$(ROOT)
+	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(ROOT)"
+
+	git -C "$(WEBSITE)" add ".$(ROOT)"
+	git -C "$(WEBSITE)" commit -m "update presentations"
+	git -C "$(WEBSITE)" push
 
 .PHONY: all serve update clean
