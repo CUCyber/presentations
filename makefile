@@ -23,7 +23,7 @@ clean:
 $(OUTDIR)$(ROOT): $(SOURCES)
 	for file in $?; do \
 		rm -rf "$(OUTDIR)$(ROOT)$${file%.md}"; \
-		"$(GENERATE)" -i "$$(echo "$${file%.md}" | cut -c3-)" -r "$(ROOT)" -o "$(THEME)" -t "$(TEMPLATE)" -a "$${file%.md}.res" "$${file}" "$(OUTDIR)$(ROOT)$${file%.md}"; \
+		"$(GENERATE)" -i "$${file%.md}" -r "$(ROOT)" -o "$(THEME)" -t "$(TEMPLATE)" -a "$${file%.md}.res" "$${file}" "$(OUTDIR)$(ROOT)$${file%.md}"; \
 	done
 
 	touch $(OUTDIR)$(ROOT)
