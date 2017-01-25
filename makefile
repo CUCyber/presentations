@@ -13,7 +13,7 @@ SOURCES=$(shell find . \( -path './reveal.js' -o -path ./"$(OUTDIR)" \) -prune -
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
 serve: all
-	cd "$(OUTDIR)"; python3 -m http.server
+	cd "$(OUTDIR)"; python3 -m http.server -b localhost
 
 update: $(WEBSITE)$(ROOT)
 
