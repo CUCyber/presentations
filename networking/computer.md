@@ -116,6 +116,8 @@ Note:
 Note:
 * Manage switches port rules can range from ip's to MAC addresses
 
+
+
 # Network Security
 
 
@@ -128,12 +130,13 @@ Note:
 
 ## Trusted Neighbors
 
-* only put trusted neighbors on the same switch
-* In CISCO Networks trusted neighboors are neighboor routers that the router will accept updates from (IGRP & EIGRP)
+* Only put trusted neighbors on the same switch.
+* In CISCO Networks trusted neighboors are neighboor routers that the router will accept updates from (IGRP & EIGRP).
 
 Note:
 * Interior Gateway Routing Protocol
 * Enhanced Interior Gateway Routing Protocol
+
 
 
 # Core Network Services
