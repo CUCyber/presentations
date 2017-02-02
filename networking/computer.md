@@ -114,7 +114,9 @@ Note:
 * managed switches can signal to routers the virtual network to which packets belong
 
 Note:
-* Manage switches port rules can range from ip's to MAC addresses
+* Manage switches port rules can range from IP's to MAC addresses
+
+
 
 
 
@@ -130,12 +132,13 @@ Note:
 
 ## Trusted Neighbors
 
-* only put trusted neighbors on the same switch
-* In CISCO Networks trusted neighboors are neighboor routers that the router will accept updates from (IGRP & EIGRP)
+* Only put trusted neighbors on the same switch.
+* In CISCO Networks trusted neighboors are neighboor routers that the router will accept updates from (IGRP & EIGRP).
 
 Note:
 * Interior Gateway Routing Protocol
 * Enhanced Interior Gateway Routing Protocol
+
 
 
 # Core Network Services
@@ -150,7 +153,7 @@ Note:
 ## Domain Name System (DNS)
 
 * translates names to IP addresses
-* essentially a phone book for the internet
+* essentially a phone book for the Internet
 
 
 ## RADIUS
