@@ -1,4 +1,4 @@
-# Firewalls - Part 1
+# Firewalls Part 1
 
 By: Mackenzie Binns, Foster McLane & Nick Bulischeck
 
