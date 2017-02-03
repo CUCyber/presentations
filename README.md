@@ -5,6 +5,7 @@ In this repository are the markdown sources to presentations given by CU Cyber.
 
 ## Dependencies
 
+* gmake (not bsdmake)
 * git
 * rsync
 * python3
