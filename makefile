@@ -1,3 +1,5 @@
+SHELL=/bin/bash
+
 OUTDIR=public
 ROOT=/presentations/
 
@@ -8,7 +10,7 @@ GENERATE=./generate.py
 
 WEBSITE=../website
 
-SOURCES=$(shell find . \( -path './reveal.js' -o -path ./"$(OUTDIR)" \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print)
+SOURCES!=find * \( -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print
 
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
