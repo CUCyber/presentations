@@ -15,7 +15,7 @@ SOURCES!=find * \( -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
 serve: all
-	cd "$(OUTDIR)"; python3 -m http.server -b localhost
+	while inotifywait -re modify * &>/dev/null; do make all; done & cd "$(OUTDIR)"; python3 -m http.server -b localhost
 
 update: $(WEBSITE)$(ROOT)
 

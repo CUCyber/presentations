@@ -9,12 +9,13 @@ In this repository are the markdown sources to presentations given by CU Cyber. 
 * git
 * rsync
 * python3
+* inotify-tools
 
 
 ### Debian/Ubuntu/Kali
 
 ```sh
-$ sudo apt install git python3 rsync
+$ sudo apt install git rsync python3 inotify-tools
 ```
 
 
@@ -22,28 +23,28 @@ $ sudo apt install git python3 rsync
 
 ```sh
 $ sudo yum install epel-release
-$ sudo yum install git python34 rsync
+$ sudo yum install git rsync python34 inotify-tools
 ```
 
 
 ### Fedora
 
 ```sh
-$ sudo dnf install git rsync
+$ sudo dnf install git rsync inotify-tools
 ```
 
 
 ### Arch
 
 ```sh
-$ sudo pacman -S git rsync
+$ sudo pacman -S git rsync inotify-tools
 ```
 
 
 ### Gentoo
 
 ```sh
-$ sudo emerge git python:3.4
+$ sudo emerge git python:3.4 inotify-tools
 ```
 
 
