@@ -8,14 +8,14 @@ In this repository are the markdown sources to presentations given by CU Cyber. 
 
 * git
 * rsync
-* python3
-* inotify-tools
+* python
+* python-watchdog (optional; for automatic rebuilding on presentation change)
 
 
 ### Debian/Ubuntu/Kali
 
 ```sh
-$ sudo apt install git rsync python3 inotify-tools
+$ sudo apt install git rsync python-watchdog
 ```
 
 
@@ -23,28 +23,28 @@ $ sudo apt install git rsync python3 inotify-tools
 
 ```sh
 $ sudo yum install epel-release
-$ sudo yum install git rsync python34 inotify-tools
+$ sudo yum install git rsync
 ```
 
 
 ### Fedora
 
 ```sh
-$ sudo dnf install git rsync inotify-tools
+$ sudo dnf install git rsync python3-watchdog
 ```
 
 
 ### Arch
 
 ```sh
-$ sudo pacman -S git rsync inotify-tools
+$ sudo pacman -S git rsync python-watchdog
 ```
 
 
 ### Gentoo
 
 ```sh
-$ sudo emerge git python:3.4 inotify-tools
+$ sudo emerge dev-vcs/git dev-python/watchdog
 ```
 
 
@@ -55,7 +55,7 @@ To build all of the presentations into a hostable directory, edit the 'makefile'
 
 ## Testing
 
-To build all of the presentations and host them on a temporary local server, edit the 'makefile' as desired and run `make serve`. Open your web browser to 'http://localhost:8000/'.
+To build all of the presentations and host them on a temporary local server, edit the 'makefile' as desired and run `make serve`. Open your web browser to 'http://localhost:8080/'.
 
 
 ## Updating

@@ -7,6 +7,7 @@ THEME=blood
 TEMPLATE=./template.html
 
 GENERATE=./generate.py
+SERVE=./serve.py
 
 WEBSITE=../website
 
@@ -15,7 +16,7 @@ SOURCES!=find * \( -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
 serve: all
-	while inotifywait -re modify * &>/dev/null; do make all; done & cd "$(OUTDIR)"; python3 -m http.server -b localhost
+	$(SERVE) $(OUTDIR)$(ROOT)
 
 update: $(WEBSITE)$(ROOT)
 
