@@ -1,8 +1,12 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import os
 import os.path
 import shutil
-import urllib.parse
+
+try:
+    from urllib.parse import quote as urlquote
+except ImportError:
+    from urllib import quote as urlquote
 
 
 def generate(input_file, reveal_id, resource_dir, template, root_dir, output_dir):
@@ -30,7 +34,7 @@ def generate(input_file, reveal_id, resource_dir, template, root_dir, output_dir
             title = title.strip()
 
             # template given file
-            index.write(template.read().format(id=urllib.parse.quote(reveal_id, safe=''), title=title, root=urllib.parse.quote(root_dir), theme=args.theme, presentation=os.path.basename(input_file)))
+            index.write(template.read().format(id=urlquote(reveal_id, safe=''), title=title, root=urlquote(root_dir), theme=args.theme, presentation=os.path.basename(input_file)))
 
 
 if __name__ == '__main__':

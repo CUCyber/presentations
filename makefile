@@ -16,7 +16,7 @@ SOURCES!=find * \( -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
 serve: all
-	$(SERVE) $(OUTDIR)$(ROOT)
+	$(SERVE) $(OUTDIR)
 
 update: $(WEBSITE)$(ROOT)
 
