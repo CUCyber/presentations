@@ -1,4 +1,4 @@
-# Introduction To Reverse Engineering with Radare2
+# Reverse Engineering with Radare2
 
 By: Nick Bulischeck, Foster McLane, Mackenzie Binns
 
