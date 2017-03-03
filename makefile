@@ -36,7 +36,7 @@ reveal.js/lib:
 
 	sed -i -e 's/^\(\s*url:.*\) + window\.location\.search/\1/g' reveal.js/plugin/notes/notes.js
 
-	wget -O reveal.js/lib/js/socket.io.js https://cdn.socket.io/socket.io-1.4.8.js
+	wget -O reveal.js/lib/js/socket.io.js https://cdn.socket.io/socket.io-1.7.3.js
 
 $(OUTDIR)$(ROOT)reveal: reveal.js/lib
 	mkdir -p "$(OUTDIR)$(ROOT)"reveal
