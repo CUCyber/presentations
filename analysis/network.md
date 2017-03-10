@@ -208,7 +208,7 @@ Note:
 
 
 
-# How is a typical network protocol structured?
+# Network Protocol Structure
 
 
 ## Levels
@@ -226,7 +226,8 @@ Note:
 * Minecraft Authentication API - HTTP based
 
 
-# How does one reverse engineer a network protocol?
+
+# How To Reverse Engineer a Protocol
 
 
 ## Tools
@@ -251,7 +252,7 @@ Note:
 
 
 
-# Minecraft Authentication API
+# Minecraft Auth API
 
 
 ## Legacy
@@ -264,7 +265,7 @@ Note:
 * `http://session.minecraft.net/game/checkserver.jsp`
 
 
-### `http://login.minecraft.net/`
+### Login
 
 
 #### Parameters
@@ -281,7 +282,7 @@ Note:
 * session id
 
 
-### `http://session.minecraft.net/game/joinserver.jsp`
+### Join Server
 
 
 #### Parameters
@@ -296,7 +297,7 @@ Note:
 * `OK` or `Bad login`
 
 
-### `http://session.minecraft.net/game/checkserver.jsp`
+### Check Server
 
 
 #### Parameters
@@ -324,7 +325,7 @@ Note:
 * `invalidate`
 
 
-### `authenticate`
+### Authenticate
 
 
 #### Parameters
@@ -339,7 +340,7 @@ Note:
 * `clientToken`
 
 
-### `refresh`
+### Refresh
 
 
 #### Parameters
@@ -353,7 +354,7 @@ Note:
 * `clientToken`
 
 
-### `validate`
+### Validate
 
 
 #### Parameters
@@ -366,7 +367,7 @@ Note:
 * none or error
 
 
-### `signout`
+### Signout
 
 
 #### Parameters
@@ -380,7 +381,7 @@ Note:
 * none or error
 
 
-### `invalidate`
+### Invalidate
 
 
 #### Parameters
@@ -391,6 +392,7 @@ Note:
 #### Response
 
 * none or error
+
 
 
 # What does this mean?
@@ -405,7 +407,7 @@ Note:
 
 ## Capes!
 
-* Capes are fetched from `http://s3.amazonaws.com/MinecraftCloacks/<username>.png`
+* Capes are fetched from `http://s3.amazonaws.com/MinecraftCloaks/<username>.png`
 * A carefully crafted proxy server is able to grant you capes
 	- Note this cape is only viewable to those on the proxy
 
@@ -417,7 +419,7 @@ Note:
 * A whole custom system from usernames to skins to capes to forum authentication is possible
 
 
-## What about the Minecraft multiplayer protocol?
+## What about multiplayer protocol?
 
 * Chunked world communication and clocked events based
 * Out of the scope of this presentation but easy enough as a fun exercise
