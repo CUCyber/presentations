@@ -19,95 +19,97 @@ $ git clone https://github.com/nbulischeck/pcode.git
 
 
 
-## Tools
+# Tools
 
-* Inline Assembly (x86, Intel Syntax >>)
+* Inline Assembly (x86, Intel Syntax)
 * C Programming
 
 
-### Inline Assembly
+## Inline Assembly
 
 * What is it?
 * Benefits
-	+ Read and write C variables from assembler
-	+ Perform jumps from assembler code to C labels
-	+ Look cool 8)
+	- Read and write C variables from assembler
+	- Perform jumps from assembler code to C labels
+	- Look cool `8)`
 
 * `.intel_syntax` - Papa Bless
 * inline.c
 
 
-#### Inline Assembly (cont.)
-Inline Assembly
-```C
-asm(	"movl $1,%eax;"
-		"xorl %ebx,%ebx;"
-		"int  $0x80"
-);
+### Example Assembly
+
+```c
+asm("movl $1,%eax;"
+    "xorl %ebx,%ebx;"
+    "int  $0x80");
 ```
-Function Call
-```C
+
+
+### Example C
+
+```c
 void exit(int status);
 ```
 
 
-#### Inline Assembly (cont.)
+## Extended Inline Assembly Format
 
-Extended Inline Asm. Format
-```C
-asm [volatile] ( AssemblerTemplate 
-                 : OutputOperands 
-                 [ : InputOperands
-                 [ : Clobbers ] ])
+```c
+asm [volatile] (AssemblerTemplate 
+                : OutputOperands 
+                [ : InputOperands
+                [ : Clobbers ] ])
 ```
 
-Example
-```C
+
+### Example Assembly
+
+```c
 asm("int $0x80;"
-	:
-	:"a"(4), "b"(1), "c"(str), "d"(len)
-);
-
+    :
+    :"a"(4), "b"(1), "c"(str), "d"(len));
 ```
-Write
-```C
+
+
+### Example C
+
+```c
 ssize_t write(int fd, const void *buf, size_t count);
 ```
 
 
-#### Inline Assembly (cont.)
+## Inline Assembly
 
-* What does this do?
+What does this do?
 
-* %0, %1, etc. are operands
+* `%0`, `%1`, etc. are operands
+* `%%` is a register
 
-* %% is a register
-
-```C
+```c
 asm("movl %0, %%eax;"
-	: "=a"(fd)
-);
+    : "=a"(fd));
 ```
 
 
-#### Inline Assembly (cont.)
+### System Call
 
-* `%eax` - Syscall Number (unistd_32{64}.h)
-	+ `%ebx, %ecx, %edx, %esi, %edi, %ebp`
-* Return in `%eax`
-
-
-### C
+* `%eax` - Syscall Number (unistd\_32{64}.h)
+	- `%ebx, %ecx, %edx, %esi, %edi, %ebp`
+* return value in `%eax`
 
 
-#### Predefined Processor Macros
+## C
+
+
+### Predefined Processor Macros
 
 * What are they?
 * Wrap processor specific code
 
-`./preproc`
+#### preproc
 
-```C
+```c
 #include <stdio.h>
 
 int main(){
@@ -121,45 +123,46 @@ int main(){
 ```
 
 
-#### Misc. Macros
+### Miscellaneous Macros
 
-```C
+```c
 #define ELEMENTSOF(x)                                          \
 __extension__ (__builtin_choose_expr(                          \
        !__builtin_types_compatible_p(typeof(x), typeof(&*(x))),\
        sizeof(x)/sizeof((x)[0]),                               \
        (void)0))
 ```
-```C
+
+```c
 ELEMENTSOF(cpuid_vendor_table)
 ```
 
 
 
-## HV Detection
+# Hypervisor Detection
+
+
+## CPUID
+
+* `CPUID` opcode is a processor supplementary instruction
+* x86 Architecture
+* Allows software to discover details of the processor
+* `%eax` and sometimes `%ecx` specify what to return
 
 
 ### CPUID
 
-* CPUID opcode is a processor supplementary instruction
-* x86 Architecture
-* Allows software to discover details of the processor
-* EAX and sometimes ECX specify what to return
-
-
-#### CPUID (cont.)
-
 * How does this help us?
-* EAX=0: Get vendor ID
-* EAX=1: Processor Info and Feature Bits
-* HV Present Bit - Bit 31 of ECX of CPUID leaf 0x1.
+* `%eax` = 0 - get vendor
+* `%eax` = 1 - processor info and feature bits
+* `HV` present bit - bit 31 of `%ecx` of `CPUID` leaf `0x1`
 
 
-#### CPUID (cont.)
+### CPUID
 
 | Vendor ID          | String            |
-| -----------------  |:-----------------:|
-| KVM 			     | "KVMKVMVKM"       |
+| -----------------  | ----------------- |
+| KVM                | "KVMKVMVKM"       |
 | Microsoft Hyper-V  | "Microsoft Hv"    |
 | Windows Virtual PC | "Microsoft Hv"    |
 | Parallels          | " lrpepyh vr"     |
@@ -167,22 +170,22 @@ ELEMENTSOF(cpuid_vendor_table)
 | Xen HVM            | "XenVMMXenVMM"    |
 
 
-#### CPUID (cont.)
+### CPUID
 
-* EAX = 1
+* `%eax` = 1
 * CPU's:
-	+ stepping
-	+ model
-	+ family information in EAX
-* Feature flags in EDX and ECX
-* Additional feature info in EBX.
+	- stepping
+	- model
+	- family information in `%eax`
+* feature flags in `%edx` and `%ecx`
+* additional feature info in `%ebx`
 
 
-#### CPUID (cont.)
+### CPUID
 
-`cpuidVirt.c`
+#### cpuidVirt.c
 
-```C
+```c
 #if defined(__i386__) || defined(__x86_64__)
 
 static const struct {
@@ -197,13 +200,13 @@ static const struct {
 ```
 
 
-#### CPUID (cont.)
+### CPUID
 
-`cpuidVirt.c`
+More processor macros!
 
-* More processor macros!
+#### cpuidVirt.c
 
-```C
+```c
 #if defined (__i386__)
 #define REG_a "eax"
 #define REG_b "ebx"
@@ -214,9 +217,9 @@ static const struct {
 ```
 
 
-#### CPUID (cont.)
+### CPUID
 
-```C
+```c
 eax = 1;
 __asm__ __volatile__ (
 	"  push %%"REG_b"         \n\t"
@@ -228,18 +231,16 @@ __asm__ __volatile__ (
 
 hypervisor = !!(ecx & 0x80000000U);
 ```
-* If 31st bit of ecx is set after setting eax to 1
-	+ False if not set
-	+ True if set
-* It is always 0 on a real CPU, but also with some hypervisors.
-* Double Unary NOT, (!= 0) = 1, else = 0; 31st bit presence check
+
+* `hypervisor` is true if 31st bit of `%ecx` is set after setting `%eax` to 1
+* it is always `0` on a real CPU, but also with some hypervisors.
+* double unary not normalizes value to either `0` or `1`
 
 
-#### CPUID (cont.)
+### CPUID
 
-```C
-void cpuid(int a, unsigned int *eax, unsigned int *ebx, 
-					unsigned int *ecx, unsigned int *edx){
+```c
+void cpuid(int a, unsigned int *eax, unsigned int *ebx, unsigned int *ecx, unsigned int *edx) {
 	__asm__("cpuid" :
 			"=a"(*eax), 
 			"=b"(*ebx), 
@@ -251,11 +252,11 @@ void cpuid(int a, unsigned int *eax, unsigned int *ebx,
 ```
 
 
-#### CPUID (cont.)
+### CPUID
 
-* ebx, ecx, edx contain HV Vendor ID
+`%ebx`, `%ecx`, `%edx` contain hypervisor vendor id
 
-```C
+```c
 eax = 0x40000000U; // Hypervisor CPUID Information Leaf
 __asm__ __volatile__ (
 "  push %%"REG_b"         \n\t"
@@ -268,30 +269,28 @@ __asm__ __volatile__ (
 );
 ```
 
-* Match and we're done!
+Match and we're done!
 
 
-#### CPUID (cont.)
+### CPUID
 
-ebx = VMwa
-
-ecx = reVM
-
-edx = ware
+* `ebx` = `VMwa`
+* `ecx` =`reVM`
+* `edx` = `ware`
 
 
-### DMI Strings
+## DMI Strings
 
-* Desktop Management Interface Strings
+* Desktop Management Interface strings
 * Also known as System Management BIOS (SMBIOS)
 * Data Structures and accesss methods that read BIOS information
 
 
-#### DMI Strings (cont.)
+### DMI Strings
 
-* Common linux files
+#### Common Linux Files
 
-```C
+```c
 static const char *const dmi_vendors[] = {
 	"/sys/class/dmi/id/product_name",
 	"/sys/class/dmi/id/sys_vendor",
@@ -301,9 +300,9 @@ static const char *const dmi_vendors[] = {
 ```
 
 
-#### DMI Strings (cont.)
+### DMI Strings
 
-```C
+```c
 static const struct {
 	const char *vendor;
 	int id;
@@ -320,27 +319,30 @@ static const struct {
 };
 ```
 
+
+### DMI Strings
+
 * Why would you want to use this?
 * Hypervisors like VirtualBox don't set bit 31
 
 
-### VMWare Specific
+## VMWare Specific
 
-* Only uses "/sys/class/dmi/id/sys_vendor"
+* Uses "/sys/class/dmi/id/sys\_vendor"
 * VMware, VMW, and VMw
-* VMware says this is only half, check hypervisor port
+* VMware says to also check hardware port
 
 
-### VMWare Specific (cont.)
+### VMWare Specific
 
 * `vmwareHVPORT.c`
 * I/O port that programs can query to detect if software is running in a VMware hypervisor
-* VMware hypervisor is detected by performing an IN operation to port 0x5658
+* VMware hypervisor is detected by performing an `IN` operation to port `0x5658`
 
 
-### VMWare Specific (cont.)
+### VMWare Specific
 
-```C
+```c
 #define VMWARE_HYPERVISOR_MAGIC 	0x564D5868
 #define VMWARE_HYPERVISOR_PORT  	0x5658
 #define VMWARE_PORT_CMD_GETVERSION      10
@@ -354,9 +356,9 @@ __asm__("inl %%dx"
 ```
 
 
-### VMWare Specific (cont.)
+### VMWare Specific
 
-```C
+```c
 VMWARE_PORT(&eax, &ebx, &ecx, &edx, 
 			VMWARE_HYPERVISOR_MAGIC, UINT_MAX, 
 			VMWARE_PORT_CMD_GETVERSION, 
@@ -368,18 +370,19 @@ if (ebx == VMWARE_HYPERVISOR_MAGIC) {
 ```
 
 
-### VMWare Specific (cont.)
+### VMWare Specific
 
 * Why do you need both DMI strings and VMWare port?
 * CPUID doesn't work for guest code running at CPL3 when VT/AMD-V is not enabled/available.
 * The HVPB and HV information leaf are only defined for products based on VMware hardware version 7.
 
 
-## Further reading
+
+# Further reading
 
 * VD.txt
-* SystemD :)
+* systemd
 
 
 
-## Questions?
+# Questions?
