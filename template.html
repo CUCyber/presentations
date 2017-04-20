@@ -22,7 +22,7 @@
 		<script>
 			var multiplex = {{
 				enabled: window.location.search.match(/receiver/gi) ? false : true,
-				secret: window.location.search.match(/master/gi) ? 'prompt' : null,
+				secret: window.location.search.match(/master/gi) ? 'request' : null,
 				id: 'load',
 				server: 'https://reveal.fooster.io'
 			}};
@@ -108,10 +108,25 @@
 			}}
 
 			// determine multiplex information
-			if (multiplex['enabled'] && multiplex['secret'] === 'prompt') {{
-				multiplex['secret'] = prompt('Enter the secret token to control this presentation.');
-				if (multiplex['secret'] === '')
-					multiplex['secret'] = null;
+			if (multiplex['enabled'] && multiplex['secret'] === 'request') {{
+				multiplex['secret'] = null;
+
+				var xhr = new XMLHttpRequest();
+
+				xhr.onreadystatechange = function () {{
+					if (xhr.readyState === XMLHttpRequest.DONE) {{
+						if (xhr.status === 200 || xhr.status === 304)
+							multiplex['secret'] = xhr.responseText;
+						else
+							multiplex['secret'] = null
+
+						init();
+					}}
+				}};
+
+				xhr.open('GET', multiplex['server'] + '/token?presentation={id}', true);
+
+				xhr.send();
 			}}
 
 			if (multiplex['enabled'] && multiplex['id'] === 'load') {{
