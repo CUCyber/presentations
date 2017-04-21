@@ -23,7 +23,7 @@
 			var multiplex = {{
 				enabled: window.location.search.match(/receiver/gi) ? false : true,
 				secret: window.location.search.match(/master/gi) ? 'request' : null,
-				id: 'load',
+				id: 'request',
 				server: 'https://reveal.fooster.io'
 			}};
 		</script>
@@ -41,8 +41,8 @@
 
 		<!-- HTTPS JavaScript redirect -->
 		<script>
-			if (window.location.hostname != "localhost" && window.location.hostname != "127.0.0.1" && window.location.protocol != "https:")
-				window.location.protocol = "https";
+			if (window.location.hostname != 'localhost' && window.location.hostname != '127.0.0.1' && window.location.protocol != 'https:')
+				window.location.protocol = 'https';
 		</script>
 	</head>
 	<body>
@@ -105,51 +105,55 @@
 				}}
 
 				Reveal.initialize(reveal);
-			}}
+			}};
 
-			// determine multiplex information
-			if (multiplex['enabled'] && multiplex['secret'] === 'request') {{
+			var request = function(uri, callback) {{
+				var xhr = new XMLHttpRequest();
+
+				xhr.withCredentials = true;
+
+				xhr.onreadystatechange = function () {{
+					if (xhr.readyState === XMLHttpRequest.DONE) {{
+						if (xhr.status === 200 || xhr.status === 304)
+							callback(xhr.responseText);
+						else
+							callback(null);
+					}}
+				}};
+
+				xhr.open('GET', uri, true);
+
+				xhr.send();
+			}};
+
+			var get_id = function() {{
+				request(multiplex['server'] + '/id?presentation={id}', function(response) {{
+					multiplex['id'] = response;
+
+					if (response === null)
+						multiplex['enabled'] = false;
+
+					init();
+				}});
+			}};
+
+			var get_secret = function() {{
 				multiplex['secret'] = null;
 
-				var xhr = new XMLHttpRequest();
+				request(multiplex['server'] + '/token?presentation={id}', function(response) {{
+					multiplex['secret'] = response;
 
-				xhr.onreadystatechange = function () {{
-					if (xhr.readyState === XMLHttpRequest.DONE) {{
-						if (xhr.status === 200 || xhr.status === 304)
-							multiplex['secret'] = xhr.responseText;
-						else
-							multiplex['secret'] = null
+					get_id();
+				}});
+			}};
 
-						init();
-					}}
-				}};
-
-				xhr.open('GET', multiplex['server'] + '/token?presentation={id}', true);
-
-				xhr.send();
-			}}
-
-			if (multiplex['enabled'] && multiplex['id'] === 'load') {{
-				var xhr = new XMLHttpRequest();
-
-				xhr.onreadystatechange = function () {{
-					if (xhr.readyState === XMLHttpRequest.DONE) {{
-						if (xhr.status === 200 || xhr.status === 304)
-							multiplex['id'] = xhr.responseText;
-						else
-							multiplex['enabled'] = false
-
-						init();
-					}}
-				}};
-
-				xhr.open('GET', multiplex['server'] + '/id?presentation={id}', true);
-
-				xhr.send();
-			}}
-			else {{
+			// determine multiplex information
+			if (multiplex['enabled'] && multiplex['secret'] === 'request')
+				get_secret();
+			else if (multiplex['enabled'] && multiplex['id'] === 'request')
+				get_id();
+			else
 				init();
-			}}
 		</script>
 	</body>
 </html>
