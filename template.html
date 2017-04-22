@@ -21,11 +21,12 @@
 		<!-- multiplexing -->
 		<script>
 			var multiplex = {{
-				enabled: window.location.search.match(/receiver/gi) ? false : true,
+				server: 'https://reveal.fooster.io',
 				secret: window.location.search.match(/master/gi) ? 'request' : null,
-				id: 'request',
-				server: 'https://reveal.fooster.io'
+				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
+
+			multiplex['enabled'] = (multiplex['id'] || multiplex['secret']) ? true : false;
 		</script>
 
 		<!--[if lt IE 9]>
@@ -92,7 +93,7 @@
 				// create reveal options
 				var reveal = {{
 					history: true,
-					dependencies: dependencies
+					dependencies: dependencies,
 				}}
 
 				if (multiplex['enabled']) {{
@@ -102,6 +103,9 @@
 						id: multiplex['id'],
 						url: multiplex['server']
 					}}
+				}}
+				else {{
+					reveal['showNotes'] = true;
 				}}
 
 				Reveal.initialize(reveal);
