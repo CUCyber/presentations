@@ -19,6 +19,9 @@ serve: all
 	$(SERVE) $(OUTDIR)
 
 update: $(WEBSITE)$(ROOT)
+	git -C "$(WEBSITE)" add ".$(ROOT)"
+	git -C "$(WEBSITE)" commit -m "update presentations"
+	git -C "$(WEBSITE)" push
 
 clean:
 	rm -rf "$(OUTDIR)"
@@ -47,9 +50,5 @@ $(OUTDIR)$(ROOT)reveal: reveal.js/lib
 
 $(WEBSITE)$(ROOT): $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(ROOT)"
-
-	git -C "$(WEBSITE)" add ".$(ROOT)"
-	git -C "$(WEBSITE)" commit -m "update presentations"
-	git -C "$(WEBSITE)" push
 
 .PHONY: all serve update clean
