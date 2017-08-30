@@ -45,13 +45,19 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 # What is Cyber Security?
 
 
+## WE NEED SOME INFO
+
+HERE ABOUT CYBERSECURITY
+
+
 
 # What We Do
 
 * Give weekly presentations on informational topics
 * Cover both cyber offensive and defensive tactics
-* [[[ Professional development ]]]
- 
+* Attend competitions (CCDC, PCDC)
+* Hold CTF events (SittingDuck, Max's CTF)
+
 
 #### Tentative Weekly Presentation Schedule
 The following is subject to change
@@ -83,19 +89,27 @@ Leave you with the knowledge and experience to go into a professional cyber secu
 
 
 
-# When and Where
+#### When and Where
 
-Every Thursday at 7pm in the Watt Innovation Center.
+Every Thursday at 7pm in the Watt Innovation Center. Room TBD.
 
-An email with the exact meeting place and topic will be sent out [[[ day of or day before? ]]]
+An email with the exact meeting place and topic will be sent out a day before and we will @everyone on discord an hour or two before.
 
 
-
-# Ethics
+### Ethics
 
 1. Confidential vulnerability reporting
 2. Using cybersecurity knowledge to BUILD, not DESTROY
 3. Don't touch services/websites/networks you're not allowed to
+
+
+### Discord
+
+discord.gg/f7ZcC7z
+
+
+
+# Questions?
 
 
 
