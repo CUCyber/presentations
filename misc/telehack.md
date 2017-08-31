@@ -45,9 +45,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 # What is Cyber Security?
 
 
-## WE NEED SOME INFO
+## What is Cyber Security?
 
-HERE ABOUT CYBERSECURITY
+The protection of computer systems from the theft or damage to their hardware, software or information, as well as from disruption or misdirection of the services they provide.
 
 
 
