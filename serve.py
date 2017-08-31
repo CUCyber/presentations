@@ -45,7 +45,7 @@ except ImportError:
 
 print('serving "{}" at http://localhost:8080/'.format(outdir))
 
-httpd = HTTPServer(('localhost', 8080), SimpleHTTPRequestHandler)
+httpd = HTTPServer(('localhost', 8085), SimpleHTTPRequestHandler)
 
 try:
     httpd.serve_forever()

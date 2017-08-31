@@ -124,3 +124,31 @@ discord.gg/f7ZcC7z
 
 
 # Game: Telehack
+
+
+## Telehack.com
+
+![welcome](telehackintro.png)
+
+
+### Create a new user
+
+newuser
+
+-> Type username
+
+-> Type password
+
+
+### porthack.exe
+
+![porthack](porthack.png)
+
+
+### BBS
+
+* You can use the `dial` command to dial into a BBS
+
+* These may contain rootkits you need to get root on a box
+
+* Note: Rootkits in real life don't give you root on a box, that's called privilege escalation
