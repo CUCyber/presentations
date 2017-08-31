@@ -60,27 +60,30 @@ The protection of computer systems from the theft or damage to their hardware, s
 
 
 #### Tentative Weekly Presentation Schedule
+
 The following is subject to change
 
 
 #### Tentative Weekly Presentation Schedule
-1. 8/31  Intro to CU Cyber and Cyber Security
-2. 9/7   Intro to Linux
-3. 9/14  Intro to Networking
-4. 9/21  Pi Hole
-5. 9/28  Intro to Information Gathering 
-6. 10/5  Bettercap
-7. 10/12 Metasploit
+
+* 8/31  Intro to CU Cyber and Cyber Security
+* 9/7   Intro to Linux
+* 9/14  Intro to Networking
+* 9/21  Pi Hole
+* 9/28  Intro to Information Gathering
+* 10/5  Bettercap
+* 10/12 Metasploit
 
 
 #### Tentative Weekly Presentation Schedule
-8. 10/19 Advanced Networking
-9. 10/26 Social Engineering (OSINT)
-10. 11/2  Firewalls
-11. 11/9  Burpsuite/MITM
-12. 11/16 SittingDuck CTF
-13. 11/24 No Meeting - Thanksgiving Break
-14. 11/30 Final Meeting - People's Favorite Tools
+
+* 10/19 Advanced Networking
+* 10/26 Social Engineering (OSINT)
+* 11/2  Firewalls
+* 11/9  Burpsuite/MITM
+* 11/16 SittingDuck CTF
+* 11/24 No Meeting - Thanksgiving Break
+* 11/30 Final Meeting - People's Favorite Tools
 
 
 ## Ultimate Goal
