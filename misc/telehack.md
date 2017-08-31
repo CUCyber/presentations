@@ -47,7 +47,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## What is Cyber Security?
 
-The protection of computer systems from the theft or damage to their hardware, software or information, as well as from disruption or misdirection of the services they provide.
+The protection of computer systems from the theft or damage to their hardware, software, or information, as well as from disruption or misdirection of the services they provide.
 
 
 
@@ -85,7 +85,7 @@ The following is subject to change
 
 ## Ultimate Goal
 
-Leave you with the knowledge and experience to go into a professional cyber security role.
+Our goal is to leave you with the knowledge and experience to go into a professional cyber security role.
 
 
 
