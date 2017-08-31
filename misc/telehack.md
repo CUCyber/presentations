@@ -96,6 +96,16 @@ Every Thursday at 7pm in the Watt Innovation Center. Room TBD.
 An email with the exact meeting place and topic will be sent out a day before and we will @everyone on discord an hour or two before.
 
 
+## Blackbaud
+
+Blackbaud is coming to give a talk on Wednesday, September 6th at 5:30.
+
+This is a joint venture with ACM.
+
+Stay tuned to your emails for more information.
+
+
+
 ### Ethics
 
 1. Confidential vulnerability reporting
