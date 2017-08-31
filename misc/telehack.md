@@ -64,7 +64,7 @@ The following is subject to change
 
 
 #### Tentative Weekly Presentation Schedule
-1. 8/31  Intro to CU Cyber, Cybersecurity, and Jobs
+1. 8/31  Intro to CU Cyber and Cyber Security
 2. 9/7   Intro to Linux
 3. 9/14  Intro to Networking
 4. 9/21  Pi Hole
