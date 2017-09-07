@@ -16,9 +16,12 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Short History
 
-* Started by Linus Torvalds for lack of free kernels
-* Created with a Unix-like userspace
-* Monolithic architecture, i.e. batteries built-in
+* Started by Linux Torvalds
+* Linux is a kernel
+
+Note:
+The kernel is a computer program that is the core of a computer's OS
+It has complete control over everything in the system
 
 
 ## So Linux is a Kernel...
