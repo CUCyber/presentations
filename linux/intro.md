@@ -22,6 +22,8 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 Note:
 The kernel is a computer program that is the core of a computer's OS
 It has complete control over everything in the system
+The kernel acts as the intermediator between the OS and the computer's
+hardware
 
 
 ## So Linux is a Kernel...
@@ -420,6 +422,8 @@ Very Helpful!
 
 * [Linux Journey](http://linuxjourney.com/) for learning Linux-fu
 * [ExplainShell.com](http://explainshell.com/) to see the component parts of a command
+* [OverTheWire - Bandit](http://overthewire.org/wargames/bandit/) to test
+your command line mastery CTF style
 
 
 
