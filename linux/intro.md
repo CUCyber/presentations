@@ -16,7 +16,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Short History
 
-* Started by Linux Torvalds
+* Started by Linus Torvalds
 * Linux is a kernel
 
 Note:
