@@ -17,7 +17,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## Terminology & Notations
 
 * IP Addresses (v4 and v6)
-* Ports (TCP and UDP)
+* Ports (TCP and UDP only)
 * Subnet Mask & CIDR Notation
 
 
