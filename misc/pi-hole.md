@@ -23,6 +23,11 @@ route through the server.
 * Sites can overuse ads
 * Save mobile data when combined with a VPN
 
+## Why - unconventional uses
+* Block other sites
+* Notice a berach in the logs
+${needs to be reworded}
+
 ## Hardware
 * [Raspberry Pi](https://www.raspberrypi.org/)
 * [Digital Ocean](https://digitalocean.com)
@@ -62,7 +67,7 @@ We recommend ethernet unless you really can't get a cord to your device.
 This is the DNS provider that the pi-hole will forward to when requesting
 an unkown non-advertisment domain.
 
-We recommend ${ask fooster for opinion}
+We recommend ${ask fooster for opinion, but probably 8.8.8.8}
 
 ## Select Protocols
 
