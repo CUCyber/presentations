@@ -13,13 +13,65 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 # What is Bettercap?
 
+
 ## Man-In-The-Middle
 
-Someone is between you and the resources you're requesting
+* Someone is between you and the resources you're requesting
 
-They can see your traffic
+* They can see your traffic
 
-## 
+
+## Man-In-The-Middle
+
+![img](mitm.jpg)
+
+
+## Why not Ettercap?
+
+* Unstable on large networks (host discovery)
+
+* Not easily extended unless you dev in C/C++
+
+* Filters are outdated and don't always work
+
+* No modular HTTP(S) and TCP transparent proxies
+
+* No credential sniffer
+
+
+## Dependencies
+
+* Comes as a Ruby gem
+
+* Ruby (>= 1.9)
+
+* RubyGems environment
+
+* Fully compatible with GNU/Linux, Mac OS X and OpenBSD platforms.
+
+
+## Installation
+
+Ubuntu
+
+```Bash
+sudo apt install build-essential ruby-dev libpcap-dev
+gem install bettercap
+```
+
+Kali
+
+```Bash
+sudo apt update
+sudo apt install bettercap
+```
+
+BlackArch
+
+```Bash
+sudo pacman -S bettercap
+```
+
 
 Usage: bettercap [options]
 
