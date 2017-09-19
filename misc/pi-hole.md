@@ -18,7 +18,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## Pi-Hole
 "A black hole for internet advertisements"
 
-Pi-hole is a DNS server that blocks advertisments for all devices that
+[Pi-hole](https://pi-hole.net/) is a DNS server that blocks advertisments for all devices that
 route through the server.
 
 
@@ -68,52 +68,53 @@ host and then nothing loads!
 
 
 #### gravity.list
-${image of `/etc/pihole/gravity.list`}
+![gravity](gravity.png)
 
 
 
 # Installation
-${add image of each step}
 
 
 ## Choose Interface
+![interface](interface.png)
 Note: We recommend ethernet unless you really can't get a cord to your device.
 
 
 ## Select Upstream DNS
-
+![dns](dns.png)
 Note: This is the DNS provider that the pi-hole will forward to when requesting
-an unkown non-advertisment domain. We recommend ${ask fooster for opinion, but probably 8.8.8.8}
+an unkown non-advertisment domain. If you are unsure, pick Google.
 
 
 ## Select Protocols
-
+![protocol](protocol.png)
 Note: Leave both IPv4 and IPv6 selected.
 
 
 ## Static IP
-
-Note: Confirm that the listed static IP and gateway are correct for your network.
+![static](static.png)
+Note: Confirm that the listed static IP and gateway are correct for your host device and network.
 
 
 ## Web interface
-
+![webinterface](webinterface.png)
 Note: If you want to check on your pi-hole, we recommend enabling the web
 interface. If you are a "set it and forget it" person, feel free to disable this.
 
 
 ## Query Logging
-
+![logging](logging.png)
 Note: We recommend to keep this on so you can easily see what's going on in your
 network.
 
 
-## Complete!
+#### Complete!
+![complete](complete.png)
 
 Save the displayed password so you can login to the web interface. If you
 forget it, you can reset it through the CLI with:
 ```Bash
-pihole -a -p
+sudo pihole -a -p
 ```
 
 
