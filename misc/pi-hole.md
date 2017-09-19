@@ -74,6 +74,10 @@ host and then nothing loads!
 
 # Installation
 
+## Install
+curl -sSL https://install.pi-hole.net | bash
+Note: Be carefull when piping into bash, it is a huge security risk
+
 
 ## Choose Interface
 ![interface](interface.png)
@@ -94,6 +98,7 @@ Note: Leave both IPv4 and IPv6 selected.
 ## Static IP
 ![static](static.png)
 Note: Confirm that the listed static IP and gateway are correct for your host device and network.
+This will have to be set before starting the installation of the pi-hole
 
 
 ## Web interface
@@ -132,6 +137,38 @@ hours.
 ![logs](logs.png)
 Note: Here you can monitor the DNS queries in real time.
 
+# Monitor your Network
+
+
+## Disclamer
+This is not a full blown IDS so you will NOT notice all intrusions
+
+
+## What can you expect to find
+* rogue devices
+* smart TV spying
+* infections
+* porn
+
+
+## Rogue Devices
+Devices you do not know about will show up in the logs
+
+
+## Smart TV Spying
+Visio smart TVs send information back to Visio to determine what you are watching
+Samsung also phones home
+Note: https://www.reddit.com/r/pihole/comments/4y8w8w/block_spying_smart_tvs/?st=j7s0hdpb&sh=09385a40
+
+
+## Infection
+Notice a device calling home to its new master
+Note: 
+
+
+## Porn
+You will have a log of all requests to the DNS server,
+so efectivly you have a log of what websites people on your network visit
 
 
 # OpenVPN
