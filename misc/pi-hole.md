@@ -26,12 +26,12 @@ route through the server.
 * Ads suck!
 * Ads can be malware vectors.
 * Sites can overuse ads.
-* Save mobile data when combined with a VPN.
 
 
 ### Why - unconventional uses
 * Simple way to monitor network activity.
 * Restrict access to specific sites.
+* Save mobile data when combined with a VPN.
 
 
 ## Hardware
@@ -172,3 +172,7 @@ Note:
 ## Porn
 You will have a log of all requests to the DNS server,
 so effectively you have a log of what websites people on your network visit. 
+
+
+
+# Questions?
