@@ -79,7 +79,7 @@ host and then nothing loads!
 ```Bash
 curl -sSL https://install.pi-hole.net | bash
 ```
-Note: Be carefull when piping into bash, it is a huge security risk.
+Note: Be careful when piping into bash, it is a huge security risk.
 
 
 ### Choose Interface
@@ -88,9 +88,9 @@ Note: We recommend ethernet unless you really can't get a cord to your device.
 
 
 ### Select Upstream DNS
-![dns](dns.png)
+![DNS](dns.png)
 Note: This is the DNS provider that the pi-hole will forward to when requesting
-an unkown non-advertisment domain. If you are unsure, pick Google.
+an unknown non-advertisement domain. If you are unsure, pick Google.
 
 
 ### Select Protocols
@@ -171,4 +171,4 @@ Note:
 
 ## Porn
 You will have a log of all requests to the DNS server,
-so efectivly you have a log of what websites people on your network visit. 
+so effectively you have a log of what websites people on your network visit. 
