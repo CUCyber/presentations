@@ -6,6 +6,7 @@ In this repository are the markdown sources to presentations given by CU Cyber. 
 
 ## Dependencies
 
+* make
 * git
 * rsync
 * python
@@ -15,7 +16,7 @@ In this repository are the markdown sources to presentations given by CU Cyber. 
 ### Debian/Ubuntu/Kali
 
 ```sh
-$ sudo apt install git rsync python-watchdog
+$ sudo apt install make git rsync python-watchdog
 ```
 
 
@@ -23,21 +24,21 @@ $ sudo apt install git rsync python-watchdog
 
 ```sh
 $ sudo yum install epel-release
-$ sudo yum install git rsync
+$ sudo yum install make git rsync
 ```
 
 
 ### Fedora
 
 ```sh
-$ sudo dnf install git rsync python3-watchdog
+$ sudo dnf install make git rsync python3-watchdog
 ```
 
 
 ### Arch
 
 ```sh
-$ sudo pacman -S git rsync python-watchdog
+$ sudo pacman -S make git rsync python-watchdog
 ```
 
 
@@ -45,6 +46,16 @@ $ sudo pacman -S git rsync python-watchdog
 
 ```sh
 $ sudo emerge dev-vcs/git dev-python/watchdog
+```
+
+
+### macOS
+
+Requires [Homebrew](https://brew.sh/). Use `gmake` instead of `make`.
+
+```sh
+$ brew install make git rsync
+$ pip install watchdog
 ```
 
 
