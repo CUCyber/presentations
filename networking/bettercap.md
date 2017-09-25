@@ -40,7 +40,7 @@ Bettercap is a powerful, flexible and portable tool
 ## Starbucks Example
 
 Note:
-The router/switch is responsible for forwarding all of your packets to the correct destination
+The router/switch is responsible for forwarding all of your packets to the correct destination.
 
 
 ## Why not Ettercap?
