@@ -71,21 +71,21 @@ The router/switch is responsible for forwarding all of your packets to the corre
 
 Ubuntu
 
-```Bash
+```bash
 sudo apt install build-essential ruby-dev libpcap-dev
 gem install bettercap
 ```
 
 Kali
 
-```Bash
+```bash
 sudo apt update
 sudo apt install bettercap
 ```
 
 BlackArch
 
-```Bash
+```bash
 sudo pacman -S bettercap
 ```
 
@@ -94,7 +94,7 @@ sudo pacman -S bettercap
 
 Source
 
-```Bash
+```bash
 git clone https://github.com/evilsocket/bettercap
 cd bettercap
 bundle install
@@ -106,7 +106,7 @@ sudo gem install bettercap*.gem
 
 ## Usage
 
-```Bash
+```bash
 Usage: bettercap [options]
 ```
 
@@ -116,35 +116,35 @@ Usage: bettercap [options]
 
 #### Specific Targets by IP Addr
 
-```Bash
+```bash
 sudo bettercap -T 192.168.1.10, 192.168.1.11
 ```
 
 
 #### Specific Targets by MAC Addr
 
-```Bash
+```bash
 sudo bettercap -T 01:23:45:67:89:10
 ```
 
 
 #### Range of Targets
 
-```Bash
+```bash
 sudo bettercap -T 192.168.1.1-30
 ```
 
 
 #### Attacking a Subnet
 
-```Bash
+```bash
 sudo bettercap -T 192.168.1.1/24
 ```
 
 
 #### Randomize YOUR MAC
 
-```Bash
+```bash
 sudo bettercap --random-mac
 ```
 
@@ -154,7 +154,7 @@ We talked about the option of MAC changing last presentation
 
 ### Options
 
-```Bash
+```bash
 -I, --interface IFACE  | Specify your interface
 -T, --target ADDRESS   | Specify the target address
 -G, --gateway ADDRESS  | Specify the gateway address
@@ -170,7 +170,7 @@ Bettercap automatically detects your default network interface, but it can use a
 
 ### Fun Options
 
-```Bash
+```bash
 sudo bettercap -T 192.168.1.2 --kill
 sudo bettercap --ignore [your ip] --kill
 sudo bettercap --proxy -P POST
