@@ -16,7 +16,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## What is Bettercap?
 
-BetterCAP is a powerful, flexible and portable tool
+Bettercap is a powerful, flexible and portable tool
 
 * perform various types of MITM attacks against a network
 
