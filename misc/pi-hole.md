@@ -86,46 +86,60 @@ host and then nothing loads!
 ```bash
 curl -sSL https://install.pi-hole.net | bash
 ```
-Note: Be careful when piping into bash, it is a huge security risk.
+
+Note:
+Be careful when piping into bash, it is a huge security risk.
 
 
 ### Choose Interface
 
 ![interface](interface.png)
-Note: We recommend ethernet unless you really can't get a cord to your device.
+
+Note:
+We recommend ethernet unless you really can't get a cord to your device.
 
 
 ### Select Upstream DNS
 
 ![DNS](dns.png)
-Note: This is the DNS provider that the pi-hole will forward to when requesting
+
+Note:
+This is the DNS provider that the pi-hole will forward to when requesting
 an unknown non-advertisement domain. If you are unsure, pick Google.
 
 
 ### Select Protocols
 
 ![protocol](protocol.png)
-Note: Leave both IPv4 and IPv6 selected.
+
+Note:
+Leave both IPv4 and IPv6 selected.
 
 
 ### Static IP
 
 ![static](static.png)
-Note: Confirm that the listed static IP and gateway are correct for your host device and network.
+
+Note:
+Confirm that the listed static IP and gateway are correct for your host device and network.
 This will have to be set before starting the installation of the pi-hole, typically in your router/modem settings.
 
 
 ### Web interface
 
 ![webinterface](webinterface.png)
-Note: If you want to check on your pi-hole, we recommend enabling the web
+
+Note:
+If you want to check on your pi-hole, we recommend enabling the web
 interface. If you are a "set it and forget it" person, feel free to disable this.
 
 
 ### Query Logging
 
 ![logging](logging.png)
-Note: We recommend to keep this on so you can easily see what's going on in your
+
+Note:
+We recommend to keep this on so you can easily see what's going on in your
 network.
 
 
@@ -133,7 +147,8 @@ network.
 
 ![complete](complete.png)
 
-Note: Save the displayed password so you can login to the web interface. If you
+Note:
+Save the displayed password so you can login to the web interface. If you
 forget it, you can reset it through the CLI with: `sudo pihole -a -p`
 
 
@@ -144,14 +159,16 @@ forget it, you can reset it through the CLI with: `sudo pihole -a -p`
 #### Dashboard
 
 ![dashboard](dashboard.png)
-Note: This page gives you a brief overview of your network in the last 24
+Note:
+This page gives you a brief overview of your network in the last 24
 hours.
 
 
 ## Query Log
 
 ![logs](logs.png)
-Note: Here you can monitor the DNS queries in real time.
+Note:
+Here you can monitor the DNS queries in real time.
 
 
 
@@ -181,7 +198,9 @@ Devices you do not know about will show up in the logs.
 Visio smart TVs send information back to Visio to determine what you are watching.
 
 Samsung also phones home.
-Note: https://www.reddit.com/r/pihole/comments/4y8w8w/block\_spying\_smart\_tvs/?st=j7s0hdpb&sh=09385a40
+
+Note:
+https://www.reddit.com/r/pihole/comments/4y8w8w/block\_spying\_smart\_tvs/?st=j7s0hdpb&sh=09385a40
 
 
 ## Infection

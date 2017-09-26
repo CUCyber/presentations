@@ -18,11 +18,11 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 Bettercap is a powerful, flexible and portable tool
 
-* perform various types of MITM attacks against a network
+* Perform various types of MITM attacks against a network
 
-* manipulate HTTP, HTTPS and TCP traffic in realtime 
+* Manipulate HTTP, HTTPS and TCP traffic in realtime
 
-* sniff for credentials and much more.
+* Sniff for credentials and much more
 
 
 ## Man-In-The-Middle
