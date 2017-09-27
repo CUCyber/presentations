@@ -137,7 +137,6 @@ Note:
 * Google/Google Dorks
 * nmap
 * dmitry
-* Nessus Security Center
 * Wireshark
 * Metasploit
 * Nikto
