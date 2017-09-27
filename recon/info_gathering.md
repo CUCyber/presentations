@@ -134,24 +134,12 @@ Note:
 
 ### Tools for Info Gathering
 
-* Google/Google Dorks
 * nmap
 * dmitry
 * Wireshark
 * Metasploit
 * Nikto
 * And More!
-
-
-### Google Dorks
-
-* Dorks are crafted searches that make use of Google searching tools
-* [Dork Database](https://www.exploit-db.com/google-hacking-database/)
-* [Online Cameras](inurl:/view/viewer_index.shtml)
-* [DD-WRT Routers](https://www.exploit-db.com/ghdb/3814/)
-
-Note:
-* Second Link is good example
 
 
 ## Nmap
