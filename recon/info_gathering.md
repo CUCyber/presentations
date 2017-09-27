@@ -1,6 +1,6 @@
 # Information Gathering Foundations
 
-By: Mackenzie Binns
+By: Nick Bulischeck, Weston Belk, Foster McLane, Mackenzie Binns
 
 CU Cyber
 
@@ -11,10 +11,10 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 
-# Intro...to the Intro
+## Intro to Info Gathering
 
 
-## Topics
+### Topics
 
 * Why is information gathering important?
 * What should you be looking for?
@@ -22,10 +22,10 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * What tools are there to help you find things?
 
 
-## Why is information gathering important?
+### Why Is Info Gathering Important?
 
 
-### Attacking
+#### Attacking
 
 * You don't know what you don't know
 * Increases surface area for attack
@@ -35,7 +35,7 @@ Note:
 * You never know when a bit of information will be handy!
 
 
-### Defense
+#### Defense
 
 * You don't know what you don't know
 * Knowing what is on your network
@@ -46,7 +46,7 @@ Note:
 * Knowing what/who is on your network allows you to respond more quickly
 
 
-### Example
+##### Example
 
 * A new exploit for Adobe Flash comes out, how would you respond?
 
@@ -56,33 +56,40 @@ Note:
 
 
 
-# I Spy with my little eye...
+### Recording Your Findings
 
 
-## What to record
-
-* You should be recording everything
-* Even small details can be important
-* Overwhelmed? Organization is your friend
-
-Note:
-* Details all the way down to what is someone's favorite color can be important (Password cracking)
-* Use tools to help you organize thoughts: OneNote, Good naming conventions, well thought out groupings of information.
-
-
-## Thing 1...Thing n
-
-* Take screenshots
-* Save scan outputs
-* Save interesting URLs
-* Save employee lists
-* etc.
-
-Note:
-* Anyone have any idea what else would be good to record?
+#### Boxes on the Network
+- IP(s)
+- Firewall Ports open and closed
+- Services running
+    * Service Name
+    * Service Version
+    * Service Purpose
+    * Service Port(s)
+    * Interface(s) listening
 
 
-## Record your actions
+#### Individual Machines
+- User permissions and shell
+- Group permissions
+- Directory permissions
+- Purpose of the machine
+- Running services
+
+
+#### Reporting
+- Report how you secured the machine.
+    * Before/What are the security risks
+    * Steps taken
+    * After (Result)
+- Take screenshots
+- Save scan outputs
+- Save interesting URLs
+- Save account lists
+
+
+#### Record your actions
 
 * If you are able to compromise something, record how
 * Will ensure you are always moving forward
@@ -95,20 +102,21 @@ Note:
 
 
 
-# Get Organized
+## Organization
 
 
-## Tools for Organization
+### Tools for Info Organization
 
+* KeepNote (Linux/Kali)
 * OneNote (Windows)
 * Evernote/Google Keep
-* Notepad
+* RecordMyDesktop/OBS
 * Excel
 * Vimwiki/Emacs Org-mode
 * etc.
 
 
-## Tips for use
+### Tips for use
 
 * Make sure to categorize your data well
 * Don't just stick everything in one document
@@ -121,10 +129,10 @@ Note:
 
 
 
-# Nitty Gritty
+## Gathering/Demo
 
 
-## Basic Tools
+### Tools for Info Gathering
 
 * Google/Google Dorks
 * nmap
@@ -136,7 +144,7 @@ Note:
 * And More!
 
 
-## Google Dorks
+### Google Dorks
 
 * Dorks are crafted searches that make use of Google searching tools
 * [Dork Database](https://www.exploit-db.com/google-hacking-database/)
