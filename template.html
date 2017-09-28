@@ -23,7 +23,7 @@
 			var multiplex = {{
 				server: 'https://reveal.fooster.io',
 				secret: window.location.search.match(/master/gi) ? 'request' : null,
-				id: window.location.search.match(/slave/gi) ? 'request' : null,
+				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
 
 			multiplex['enabled'] = (multiplex['id'] || multiplex['secret']) ? true : false;
