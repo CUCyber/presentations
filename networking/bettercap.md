@@ -165,7 +165,7 @@ We talked about the option of MAC changing last presentation
 ```
 
 Note:
-Bettercap automatically detects your default network interface, but it can use another interface if it's specified
+Bettercap automatically detects your default network interface, but it can use another interface if it's specified.
 
 
 ### Fun Options
