@@ -71,9 +71,21 @@ To build all of the presentations and host them on a temporary local server, edi
 
 ## Updating
 
-To build all of the presenations and upload them to the website automatically, edit the 'makefile' as desired and for the website git repository location and run `make update`. You must have push access to the repository at the specified directory.
+To build all of the presentions and upload them to the website automatically, edit the 'makefile' as desired and for the website git repository location and run `make update`. You must have push access to the repository at the specified directory.
 
 
 ## Cleaning
 
 To clean out any generated files, run `make clean`.
+
+
+## Presenting
+
+The presentations are easy enough to give, but can be improved by using speaker view. To pull up speaker view, press 's' from the presentation. This opens a page that includes a timer, speaker notes, and images of the current and next slides.
+
+
+### Multiplex
+
+Each presentation can be configured as a presentation master that can control receiving instances of the presentation. This means that from one computer, you can control movement of the slides on several other computers. Additionally, this removes visible speaker notes from the receiving instances.
+
+To make a presentation the master, add `?master` to the end of the URI but before the `#` if there is one. For each receiving instance, add `?receiver` to the end of the URI but before the `#` if there is one. You must load the master presentation first to generate the key that the receiver instances will retrieve.
