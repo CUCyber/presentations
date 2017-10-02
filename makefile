@@ -28,26 +28,19 @@ clean:
 
 $(OUTDIR)$(ROOT): $(SOURCES)
 	mkdir -p $(OUTDIR)$(ROOT)
-
 	for file in $?; do \
 		rm -rf "$(OUTDIR)$(ROOT)$${file%.md}"; \
 		"$(GENERATE)" -i "$${file%.md}" -r "$(ROOT)" -o "$(THEME)" -t "$(TEMPLATE)" -a "$${file%.md}.res" "$${file}" "$(OUTDIR)$(ROOT)$${file%.md}"; \
 	done
-
 	touch "$(OUTDIR)$(ROOT)"
 
-reveal.js/lib:
+reveal.js/lib/js/socket.io.js:
 	git submodule update --init --recursive
-
-	sed -i -e 's/^\(\s*url:.*\) + window\.location\.search/\1/g' reveal.js/plugin/notes/notes.js
-
 	wget -O reveal.js/lib/js/socket.io.js https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js
 
-$(OUTDIR)$(ROOT)reveal: reveal.js/lib
+$(OUTDIR)$(ROOT)reveal: reveal.js/lib/js/socket.io.js
 	mkdir -p "$(OUTDIR)$(ROOT)"reveal
-
 	rsync -av --delete reveal.js/{css,js,lib,plugin} "$(OUTDIR)$(ROOT)"reveal
-
 	touch "$(OUTDIR)$(ROOT)"reveal
 
 $(WEBSITE)$(ROOT): $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal

@@ -22,7 +22,7 @@
 		<script>
 			var multiplex = {{
 				server: 'https://reveal.fooster.io',
-				secret: window.location.search.match(/master/gi) ? 'request' : null,
+				secret: window.location.search.match(/master/gi) && !window.location.search.match(/receiver/gi) ? 'request' : null,
 				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
 
