@@ -21,7 +21,7 @@
 		<!-- multiplexing -->
 		<script>
 			var multiplex = {{
-				server: 'https://reveal.fooster.io',
+				server: 'https://reveal.cucyber.net',
 				secret: window.location.search.match(/master/gi) && !window.location.search.match(/receiver/gi) ? 'request' : null,
 				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
@@ -134,7 +134,7 @@
 				request(multiplex['server'] + '/id?presentation={id}', function(response) {{
 					multiplex['id'] = response;
 
-					if (response === null)
+					if (!response)
 						multiplex['enabled'] = false;
 
 					init();
@@ -146,6 +146,9 @@
 
 				request(multiplex['server'] + '/token?presentation={id}', function(response) {{
 					multiplex['secret'] = response;
+
+					if (!response)
+						multiplex['enabled'] = false;
 
 					get_id();
 				}});
