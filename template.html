@@ -22,11 +22,12 @@
 		<script>
 			var multiplex = {{
 				server: 'https://reveal.cucyber.net',
-				secret: window.location.search.match(/master/gi) && !window.location.search.match(/receiver/gi) ? 'request' : null,
-				id: window.location.search.match(/receiver/gi) && !window.location.search.match(/master/gi) ? 'request' : null,
+				secret: window.location.search.match(/master/gi) ? 'request' : null,
+				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
 
-			multiplex['enabled'] = (multiplex['id'] || multiplex['secret']) ? true : false;
+			multiplex['enabled'] = multiplex['id'] != multiplex['secret'];
+			showNotes = !(multiplex['id'] || multiplex['secret']);
 		</script>
 
 		<!--[if lt IE 9]>
@@ -104,9 +105,8 @@
 						url: multiplex['server']
 					}}
 				}}
-				else {{
-					reveal['showNotes'] = true;
-				}}
+
+				reveal['showNotes'] = showNotes;
 
 				Reveal.initialize(reveal);
 			}};
