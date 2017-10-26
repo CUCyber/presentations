@@ -116,6 +116,7 @@ Note:
 * Unintelligently route traffic using a stateless ARP table
 * Statelessness of the ARP table allows ARP cache poisoning to occur
 * Anyone on an unmanaged switch can see and control traffic of neighbors
+* Typically operates at layer 2 (MAC addresses)
 
 Note:
 * ARP poisoning is when the table is filled up with bogus entries by an attacker connected to the switch
@@ -129,7 +130,16 @@ Note:
 * Managed switches can signal to routers the virtual network to which packets belong
 
 Note:
-* Manage switches port rules can range from IP's to MAC addresses
+* Can also operate at layer 3 or 4
+* Why layer 3:
+	- Potentially lower latency because it can route directly at the IP layer
+	- QoS, VLANS, and other functions handled by routers
+* Why it's not a router:
+	- Typically no dedicated WAN functions like NAT or firewalls
+	- Routers at the edge and switches on the LAN
+	- Line gets blurred more and more as L3 switches become more advanced
+* Port rules based on IP or MAC addresses
+* Routing/switching decisions based on MAC, IP, protocol, or protocol port numbers via multi-layer switching (layers 2, 3, and 4).
 * Virtual network numbers are called VLANs
 
 
