@@ -21,34 +21,34 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ### Firewalls
 
-* firewalls are designed to prohibit unauthorized access to a network
-* firewalls control access to the network by directing traffic based on rules
-* can be hardware *or* software based
+* Firewalls are designed to prohibit unauthorized access to a network
+* Firewalls control access to the network by directing traffic based on rules
+* Can be hardware *or* software based
 
 
 ### Stateful
 
-* firewalls have memory to store traffic information
+* Firewalls have memory to store traffic information
     - traffic is looked at in context
     - this is called stateful packet inspection (SPI)
-* only packets of a known connection are allowed to pass the firewall
-* firewalls also implement rules on the traffic during SPI
+* Only packets of a known connection are allowed to pass the firewall
+* Firewalls also implement rules on the traffic during SPI
 
 Note:
-* can tell what stage of a TCP connection the communication is in
-* can tell if the MTU has changed
-* can tell if the packet has fragmented
+* Can tell what stage of a TCP connection the communication is in
+* Can tell if the MTU has changed
+* Can tell if the packet has fragmented
 
 
 ### Stateless
 
-* do not store traffic information
-* each packet is treated as a new connection
-* based on rules
+* Do not store traffic information
+* Each packet is treated as a new connection
+* Based on rules
     - these are sometimes referred to as access control lists (ACLs)
 
 Note:
- * does not know if a packet is pretending to be something you requested
+ * Does not know if a packet is pretending to be something you requested
 
 
 
@@ -81,15 +81,15 @@ Note:
 
 ### Why Zones
 
-* different requirements for different parts of the network
-* businesses are typically too large for simple rule based policies
-* more granular control over traffic flow
+* Different requirements for different parts of the network
+* Businesses are typically too large for simple rule based policies
+* More granular control over traffic flow
 
 
 ### Internal
 
-* internal network usually are more dynamic than external networks
-* typically require dynamic routing
+* Internal network usually are more dynamic than external networks
+* Typically require dynamic routing
 
 Note:
 * What would you put in the internal network?
@@ -100,8 +100,8 @@ Note:
 
 ### External
 
-* typically have static routing
-* more stringent rule policies
+* Typically have static routing
+* More stringent rule policies
 
 Note:
 * Why would rules be more strict in the external zone?
@@ -109,13 +109,13 @@ Note:
 
 ### Guest 
 
-* rules configure for computers that are guests on the network
+* Rules configure for computers that are guests on the network
 
 
 ### DMZ
 
-* does not have a way into the internal network
-* has the most strict rules (typically no traffic can leave unless specifically allowed)
+* Does not have a way into the internal network
+* Has the most strict rules (typically no traffic can leave unless specifically allowed)
 
 Note:
 * What are things you would put in a DMZ?
@@ -129,12 +129,12 @@ Note:
 
 ### Signature Based Rules
 
-* signature based rule detection will look for traffic that is known
+* Signature based rule detection will look for traffic that is known
     - example: User-Agent: SQLMap
     - policy: drop connection
-* this is a powerful tool when used in conjunction with others
-* makes the attacker work harder to even get a connection established
-* will hash files that run through and drop known malware
+* This is a powerful tool when used in conjunction with others
+* Makes the attacker work harder to even get a connection established
+* Will hash files that run through and drop known malware
 
 
 
@@ -161,7 +161,7 @@ ufw app INFO <profile>
 ```
 
 Note:
-* has the ability to create application profiles
+* Has the ability to create application profiles
 
 
 ## RedHat/Fedora
@@ -192,9 +192,9 @@ Note:
 
 * Cisco
 * Palo Alto
-* have terminal interface
-* most have gui interfaces
-* gui interfaces are slower and may not lend themselves to more advanced configurations
+* Have terminal interface
+* Most have gui interfaces
+* Gui interfaces are slower and may not lend themselves to more advanced configurations
 
 
 ## Other
@@ -210,14 +210,14 @@ Note:
 
 ## Go Around
 
-* bypass the firewall altogether by finding an entry point that does not route through the firewall
-* example: Send a phishing email into the network and create a backdoor on a users computer.
+* Bypass the firewall altogether by finding an entry point that does not route through the firewall
+* Example: Send a phishing email into the network and create a backdoor on a users computer.
 
 
 ## Custom Packets
 
-* craft a packet that does not trigger rules 
-* hard to do based on the layers of rules typically involved
+* Craft a packet that does not trigger rules 
+* Hard to do based on the layers of rules typically involved
 
 
 ## Avoiding Signatures
@@ -227,8 +227,8 @@ Note:
 
 ## Abuse Stupid Rules
 
-* example: port 22 is forwarded to an internal computer
-* craft your attack for the machine on the receiving end
+* Example: port 22 is forwarded to an internal computer
+* Craft your attack for the machine on the receiving end
 
 
 
