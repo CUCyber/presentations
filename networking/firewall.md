@@ -177,10 +177,10 @@ Note:
 systemctl enable --now firewalld
 
 firewalld-cmd --status
-firewalld-cmd --zone=public --add-port=80/tcp # --permanent
+firewalld-cmd --zone=public --add-port=80/tcp # --permanent allows rules to survive reboots
 firewalld-cmd --zone=public --remove-port=80/tcp 
 firewalld-cmd --zone=public --add-service=http
-firewalld-cmd --get-services
+firewalld-cmd --zone=public --get-services
 ```
 
 Note:
