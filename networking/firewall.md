@@ -61,7 +61,7 @@ Note:
 ### Basics
 
 * source: where the traffic came from
-* destination: where the traffic came from
+* destination: where the traffic is going
 * service: the service that the traffic is for
 * interface: interface the traffic is expected from
 * direction: going in or coming out
