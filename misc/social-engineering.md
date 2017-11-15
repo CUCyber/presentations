@@ -1,7 +1,7 @@
 # Social Engineering
 ### The Human Element
 
-By: Weston Belk
+By: Weston Belk and Kyle Wolfe
 
 CU Cyber
 
@@ -157,6 +157,12 @@ Thank you & Go Tigers!
 # Tooling
 
 
+## Phishing vs Spear Phishing 
+
+Phishing is a wide net cast across an entire organization
+Spear Phishing is targeted against a single user
+
+
 ## SE Frameworks
 
 * GoPhish
@@ -170,8 +176,43 @@ Open-Source Phishing Framework
 https://getgophish.com/
 
 
+## GoPhish usage
+
+Run an spear phishing campaign against targets inside a corparation
+Simple to set up, can be setup with a template, landing page, and a listening URL
+
 ## Social Engineering Toolkit (SET)
 
 "Specifically designed to perform advanced attacks against the human element"
 
 https://www.social-engineer.org/framework/se-tools/computer-based/social-engineer-toolkit-set/
+
+
+
+# Physical Security
+
+
+## Why look at Physical Security?
+
+Can provide access that social engineering can't
+
+
+## Locks
+
+Picking the lock can give access to an area that social engineering failed to
+
+
+## Door Badge access control
+
+System Clemson uses to control access to buildings and rooms.
+
+Badges can be tricked into giving a response to a fake reader.
+This can be played back to the real reader to gain access.
+Standard readers need to be withing 3 inches, 
+
+## Elavators
+
+Large Corparations often use elevators as access controls to entire floors.
+* bypass badge control to unlock floors
+* use independent service key
+* use fire key
