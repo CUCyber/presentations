@@ -25,6 +25,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 # Exploring the Human Mind
 
+<span style="padding-top: 6em; font-size: 0.4em;">Adapted from:</span>
+<span style="padding-top: 6em; font-size: 0.4em;">&lt;Peltier, T. R. (2006). Social engineering: Concepts and solutions. Information Systems Security, 15(5),13-21.&gt;</span>
+
 
 ## Basic Human Qualities
 
@@ -43,6 +46,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 # Schemes
+
+<span style="padding-top: 6em; font-size: 0.4em;">Adapted from:</span>
+<span style="padding-top: 6em; font-size: 0.4em;">&lt;Brody, R. G., Brizzee, W. B., & Cano, L. (2012). Flying under the radar: social engineering. International Journal of Accounting & Information Management, 20(4), 335-347.&gt;</span>
 
 
 ## Dumpster Diving
@@ -107,13 +113,11 @@ Thank you & Go Tigers!
 
 # The Cycle
 
+<span style="padding-top: 6em; font-size: 0.4em;">Adapted from:</span>
+<span style="padding-top: 6em; font-size: 0.4em;">&lt;Allen, M. (2006). Social engineering: A means to violate a computer system. SANS Institute, InfoSec Reading Room.&gt;</span>
 
-## The Cycle - Illustrated
 
-1. Information Gathering
-2. Developing Relationships
-3. Exploitation
-4. Execution
+![Pretexting Cycle](cycle.png)
 
 
 ## 1. Information Gathering
@@ -128,7 +132,10 @@ Thank you & Go Tigers!
 ## 2. Developing Relationships
 
 * Insert yourself into their life
-* Put yourself into a position of trust (expand on different positions like authority and submission)
+* Put yourself into a position of trust
+	- Authority
+	- Submission
+	- Peer
 
 
 ## 3. Exploitation
@@ -151,6 +158,14 @@ Thank you & Go Tigers!
 * Implement controls
 * Regular reviews of controls
 * Simulated attacks
+
+Note:
+### Security Controls:
+* Have management buy-in and create a culture of security
+* Physical security
+* Education, awareness, and training
+* Incident response strategies
+* Good security policies and arcitecture throughout the organization
 
 
 
@@ -181,6 +196,7 @@ https://getgophish.com/
 Run an spear phishing campaign against targets inside a corparation
 Simple to set up, can be setup with a template, landing page, and a listening URL
 
+
 ## Social Engineering Toolkit (SET)
 
 "Specifically designed to perform advanced attacks against the human element"
@@ -199,20 +215,26 @@ Can provide access that social engineering can't
 
 ## Locks
 
-Picking the lock can give access to an area that social engineering failed to
+Picking the lock can give access to an area that social engineering is unable to
 
 
 ## Door Badge access control
 
-System Clemson uses to control access to buildings and rooms.
+* System Clemson uses to control access to buildings and rooms.
+* Badges can be tricked into giving a response to a fake reader.
+* This can be played back to the real reader to gain access.
+* Standard readers need to be within 3 inches.
 
-Badges can be tricked into giving a response to a fake reader.
-This can be played back to the real reader to gain access.
-Standard readers need to be withing 3 inches, 
+
+## Doors
+
+* Hinges
+* Crash bar
+
 
 ## Elavators
 
 Large Corparations often use elevators as access controls to entire floors.
-* bypass badge control to unlock floors
-* use independent service key
-* use fire key
+* Bypass badge control to unlock floors
+* Use independent service key
+* Use fire key
