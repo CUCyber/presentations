@@ -31,17 +31,17 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Basic Human Qualities
 
-1. The desire to be helpful and to trust people
-2. The fear of getting into trouble or feeling guilty
-3. The willingness to cut corners
+* The desire to be helpful and to trust people
+* The fear of getting into trouble or feeling guilty
+* The willingness to cut corners
 
 
 ## Personality Traits
 
-1. Diffusion of Responsibility
+* Diffusion of Responsibility
 	- Employees of a large company feel their actions don't directly impact the company
-2. Thinking they will benefit or will impress someone else
-3. Not wanting to throw away a relationship with another person
+* Thinking they will benefit or will impress someone else
+* Not wanting to throw away a relationship with another person
 
 
 
@@ -76,7 +76,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Phishing
 
-* Masquerading as a legimate person or service to obtain sensitive information
+* Masquerading as a legitimate person or service to obtain sensitive information
 * Tricking users to:
 	- Login to an insecure or fake form
 	- Send sensitive or valuable information directly to the attackers
@@ -87,6 +87,25 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## Phishing Scenario
 
 <pre style="font-family: inherit;">
+To: &lt;cyber@clemson.edu&gt;
+From: &lt;tickets@cIemsontigers.com&gt;
+
+Clemson Student - 
+
+Congratulations on receiving a student ticket for the Citadel game!
+Student attendance is a big part of what makes the atmosphere
+on Clemson game days so special and we hope you'll join us at Memorial Stadium.
+Due to rising concerns with ticket distribution and student attendance
+we ask you to please visit https://cIemsontigers.com/students/confirm
+and log in to confirm your attendance for the upcoming football game.
+
+Thank you & Go Tigers!
+</pre>
+
+
+## Revealed Text
+
+<pre style="font-family: monospace;">
 To: &lt;cyber@clemson.edu&gt;
 From: &lt;tickets@cIemsontigers.com&gt;
 
@@ -122,7 +141,7 @@ Thank you & Go Tigers!
 
 ## 1. Information Gathering
 
-* Gathering information about the targets to determine how to best build a relationship.
+* Gathering information about the targets to determine how to best build a relationship
 * Info you may gather
 	- Personal and professional contacts
 	- Birth dates and other personal information
@@ -169,13 +188,49 @@ Note:
 
 
 
+# Physical Security
+
+
+## Why look at Physical Security?
+
+* Physical security can provide access that social engineering can't
+
+
+## Locks
+
+* Picking the lock can give access to an area that social engineering fails to
+
+
+## Door Badge Access Control
+
+* System Clemson uses to control access to buildings and rooms
+* Badges can be tricked into giving a response to a fake reader
+* Transaction can be played back to the real reader to gain access
+* Standard readers need to be within 3 inches
+
+
+## Doors
+
+* Hinges
+* Crash bar
+
+
+## Elevators
+
+* Large corporations often use elevators as access controls to entire floors
+* Bypass badge control to unlock floors
+* Use independent service key
+* Use fire key
+
+
+
 # Tooling
 
 
 ## Phishing vs Spear Phishing 
 
-Phishing is a wide net cast across an entire organization
-Spear Phishing is targeted against a single user
+* Phishing is a wide net cast across an entire organization
+* Spear Phishing is targeted against a single user
 
 
 ## SE Frameworks
@@ -193,8 +248,9 @@ https://getgophish.com/
 
 ## GoPhish usage
 
-Run an spear phishing campaign against targets inside a corparation
-Simple to set up, can be setup with a template, landing page, and a listening URL
+* Run an spear phishing campaign against targets inside a corparation
+* Simple to set up, can be setup with a template, landing page, and a listening URL
+
 
 
 ## Social Engineering Toolkit (SET)
@@ -205,36 +261,4 @@ https://www.social-engineer.org/framework/se-tools/computer-based/social-enginee
 
 
 
-# Physical Security
-
-
-## Why look at Physical Security?
-
-Can provide access that social engineering can't
-
-
-## Locks
-
-Picking the lock can give access to an area that social engineering is unable to
-
-
-## Door Badge access control
-
-* System Clemson uses to control access to buildings and rooms.
-* Badges can be tricked into giving a response to a fake reader.
-* This can be played back to the real reader to gain access.
-* Standard readers need to be within 3 inches.
-
-
-## Doors
-
-* Hinges
-* Crash bar
-
-
-## Elavators
-
-Large Corparations often use elevators as access controls to entire floors.
-* Bypass badge control to unlock floors
-* Use independent service key
-* Use fire key
+# Questions?
