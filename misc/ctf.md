@@ -209,3 +209,27 @@ iRobot - WCSC
 ##### Robots.txt
 
 ![robotstxt](robotstxt.png)
+
+
+#### Web
+
+```PHP
+$supplied_pass = $_GET['pass'];
+$correct_pass = get_password_somehow();
+if (strcmp($supplied_pass, $correct_password) == 0) {
+  echo $flag
+} else {
+  echo 'Sorry, incorrect link';
+}
+```
+
+
+##### PHP!!!
+
+* foo.bar/?pass[]=a
+* `strcmp()` returns `NULL`
+* `==` succeeds because `NULL == 0` in PHP
+
+
+
+### Questions?
