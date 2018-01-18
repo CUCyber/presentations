@@ -1,4 +1,6 @@
-# CTF - A Hacker's Playground
+# CTF
+
+## A Hacker's Playground
 
 By: Nick Bulischeck
 
