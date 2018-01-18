@@ -65,6 +65,11 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 #### Attack and Defense
 
+![attack-and-defense](attack-defense.png)
+
+
+#### Attack and Defense
+
 * Teams vs Team
 * Vulnerable services
 
