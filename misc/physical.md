@@ -34,9 +34,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * Physical security is the idea of keeping these areas separate
 
 
-## Threat type and level
+## Threat Type and Level
 
-> How loud and what kind off attack to expect
+> How loud and what kind of attack to expect
 
 
 
@@ -52,7 +52,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 > Easy to bypass
 
 
-## Picking a lock
+## Picking a Lock
 
 > Uses the manufacturing tolerance of the lock to your advantage
 
@@ -63,7 +63,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ![Picking Pins](2.10-picking_but_lifting_one_pin_stack_too_far_.gif)
 
 
-## Try it yourself
+## Try It Yourself
 
 
 
@@ -80,23 +80,23 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ![Inside Door](inside_door.JPG)
 
-## Door gap
+## Door Gap
 
 > Allows for interacting with secured side of door
 
 
-## Crash bar
+## Crash Bar
 
 > Opens door when pushed, when combined with a gap...
 
 
-## Motion sensors
+## Motion Sensors
 
 > Opens door when motion is sensed, when combined with a gap...
 
 
 
-# Door badge access controls
+# Door Badge Access Controls
 
 
 ## Idea
@@ -104,13 +104,13 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 > A badge is required to unlock the door
 
 
-## Attack vector
+## Attack Vector
 
 * Replay attack of a valid card
 * Trick reader into sending valid unlock signal
 
 
-## Badge readers
+## Badge Readers
 
 * Standard door readers require the card to be withing 3 inches
 * Car based readers can read up to 3 feet
@@ -125,7 +125,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 > Should not be used to secure a floor
 
 
-## Bypass elevator
+## Bypass Elevator
 
 > Bridge a wire
 > Independent service 
