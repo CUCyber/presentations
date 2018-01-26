@@ -75,10 +75,12 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 > The hinge can be removed to bypass the door
 > The hinge should be on the secure side of the door
 
+
 ![Outside Door](outside_door.JPG)
 
 
 ![Inside Door](inside_door.JPG)
+
 
 ## Door Gap
 
