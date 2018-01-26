@@ -13,14 +13,14 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 
-## What is Physical Security?
+## What is physical security?
 
-> Physical Security is the security of systems in the physical world.
+> Physical security is the security of systems in the physical world.
 
 
 ## Why do we care?
 
-> Bad Physical Security can undermine perfect cyber security
+> Bad physical security can undermine perfect cyber security
 
 
 
@@ -30,7 +30,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## Secured vs. Unsecured 
 
 * A secured area is an area where people are assumed to have permission to be there
-* An Unsecured area is an area where people can easily get to 
+* An unsecured area is an area where people can easily get to 
 * Physical security is the idea of keeping these areas separate
 
 
@@ -48,19 +48,19 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Locks
 
-> used to deny access to non-authorized users
-> easy to bypass
+> Used to deny access to non-authorized users
+> Easy to bypass
 
 
 ## Picking a lock
 
-> uses the manufacturing tolerance of the lock to your advantage
+> Uses the manufacturing tolerance of the lock to your advantage
 
 
-![Pin Allignment](1.03-binding-pin-(front-view)_.gif)
+![Pin Allignment](1.03-binding-pin-front-view_.gif)
 
 
-![Picking pins](2.10-picking_but_lifting_one_pin_stack_too_far_.gif)
+![Picking Pins](2.10-picking_but_lifting_one_pin_stack_too_far_.gif)
 
 
 ## Try it yourself
@@ -75,10 +75,10 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 > The hinge can be removed to bypass the door
 > The hinge should be on the secure side of the door
 
-![Outside door](outside_door.JPG)
+![Outside Door](outside_door.JPG)
 
 
-![Inside door](inside_door.JPG)
+![Inside Door](inside_door.JPG)
 
 ## Door gap
 
@@ -106,8 +106,8 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Attack vector
 
-* replay attack of a valid card
-* trick reader into sending valid unlock signal
+* Replay attack of a valid card
+* Trick reader into sending valid unlock signal
 
 
 ## Badge readers
@@ -127,15 +127,15 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Bypass elevator
 
-> bridge a wire
-> independent service 
-> fire service
+> Bridge a wire
+> Independent service 
+> Fire service
 
 
-![elevator panel](elevator_panel.JPG)
+![Elevator Panel](elevator_panel.JPG)
 
 
-![elevator key set](elevator_keys.JPG)
+![Elevator Key Set](elevator_keys.JPG)
 
 
 
