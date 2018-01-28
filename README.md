@@ -16,7 +16,7 @@ In this repository are the markdown sources to presentations given by CU Cyber. 
 ### Debian/Ubuntu/Kali
 
 ```sh
-$ sudo apt install make git rsync python-watchdog
+$ sudo apt install make git rsync python3 python3-watchdog
 ```
 
 
@@ -24,7 +24,8 @@ $ sudo apt install make git rsync python-watchdog
 
 ```sh
 $ sudo yum install epel-release
-$ sudo yum install make git rsync
+$ sudo yum install make git rsync python34
+$ sudo pip3 install watchdog
 ```
 
 
@@ -54,8 +55,8 @@ $ sudo emerge dev-vcs/git dev-python/watchdog
 Requires [Homebrew](https://brew.sh/). Use `gmake` instead of `make`.
 
 ```sh
-$ brew install make git rsync
-$ pip install watchdog
+$ brew install make git rsync python3
+$ pip3 install watchdog
 ```
 
 
