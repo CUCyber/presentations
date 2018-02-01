@@ -108,7 +108,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * Public key included and signed with Nintendo's private key
 
 
-## Twiizer Attack
+## Tweezer Attack
 
 * Extracted the master key out of firmware
 * Uses tweezers to bridge connections to Wii's memory during Gamecube mode
