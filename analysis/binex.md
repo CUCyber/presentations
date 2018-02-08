@@ -90,6 +90,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * Makes exploit development a walk in the park
 
 
+
 ## Where to Practice?
 
 * Online CTFs
@@ -164,6 +165,9 @@ int main(){
 ### Stack-based Buffer Overflow!
 
 
+#### Why is it a stack-based buffer overflow?
+
+
 ### Stack Protections
 
 
@@ -190,6 +194,77 @@ int main(){
 ### Compiling the Source
 
 `gcc -o bin bin.c -fno-stack-protector`
+
+
+### Exploiting the Binary
+
+
+#### Disassemble Main
+
+![bof_main_graph](bof_graph.png)
+
+
+#### Disassemble Main
+
+![bof_main_graph_analyzed](analyzed_main.png)
+
+
+#### Exploit Development
+
+
+```C
+#define BUF_SIZE 32
+char buffer[BUF_SIZE];
+```
+```Python
+python -c 'print("A"*32)' | ./bof
+```
+
+
+```C
+#define BUF_SIZE 32
+char buffer[BUF_SIZE];
+```
+```Python
+python -c 'print("A"*33)' | ./bof
+```
+
+
+### What will it take to exploit it?
+
+
+![bof_main_graph_analyzed](analyzed_main.png)
+
+
+#### Calculated
+
+![calculated](calculated.png)
+
+
+#### Exploit
+
+![winning](winning.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Questions
