@@ -110,12 +110,76 @@ int main(){
 
 #### Disassembly (cont.)
 
+* break *main
+* r
+* si
+* si
+* si
+
 ![puts](puts.png)
 
 
 #### Disassembly (cont.)
 
 ![binja_main](binaryninja.png)
+
+
+## Your First Exploit
+
+
+### Binary
+
+```C
+#include <stdio.h>
+#define BUF_SIZE 32
+
+int main(){
+	volatile int change_me = 0;
+	char buffer[BUF_SIZE];
+	gets(buffer);
+	if (change_me){
+		//system("cat flag.txt");
+		printf("You win!\n");
+	}
+	return 0;
+}
+```
+
+`gcc -o bin bin.c`
+
+
+### What's the exploit?
+
+
+### Stack-based Buffer Overflow!
+
+
+### Stack Protections
+
+
+![bof](disassemble_bof.png)
+
+
+#### Stack Canary
+
+* Small, random integer
+* Chosen at run-time
+* buffer -> canary -> ip
+
+
+#### NX and DEP
+
+![checksec](checksec_bof.png)
+
+* NX = gf shellcode
+* NX -> enemy ROP inbound
+* DEP includes ASLR
+* ASLR -> NOP Sled
+
+
+### Compiling the Source
+
+`gcc -o bin bin.c -fno-stack-protector`
 
 
 ## Questions
