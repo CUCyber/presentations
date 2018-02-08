@@ -68,7 +68,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ### Radare2
 
-* Terminal-based
+* Terminal-based, visual mode
 * Radare2-gui
 * Very powerful
 * Hard to remember commands
@@ -80,6 +80,15 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * Both free
 * Both do the same sort of dynamic analysis
 * Pwndbg is constantly developed, Peda inactive af
+
+
+## Where to Practice?
+
+* Online CTFs
+* [OTW - Narnia](http://overthewire.org/wargames/narnia/)
+* [pwnable.kr](http://pwnable.kr)
+* [pwnable.tw](https://pwnable.tw)
+* [Exploit Excercises - Protostar](https://exploit-exercises.com/protostar/)
 
 
 ## Intro Binary
@@ -104,12 +113,9 @@ int main(){
 ![puts](puts.png)
 
 
-### Objdump
+#### Disassembly (cont.)
 
-+	`-d` disassemble
-+	`-s` full dump
-+	`-t` dump symbols and `strip`
-+	`-r` and `-R` print relocations
+![binja_main](binaryninja.png)
 
 
 ## Questions
