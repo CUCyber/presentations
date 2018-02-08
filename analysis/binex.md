@@ -29,7 +29,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * **Information gathering**
 
 
-## A Word on Ethics...
+### A Word on Ethics...
 
 >	With great power comes great responsibility
 
@@ -52,6 +52,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ### Exploiting a Vulnerability
 
 * How is this related to Binary **Exploit**ation?
+
 
 
 ## Tools
@@ -82,6 +83,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * Pwndbg is constantly developed, Peda inactive af
 
 
+
 ## Where to Practice?
 
 * Online CTFs
@@ -89,6 +91,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * [pwnable.kr](http://pwnable.kr)
 * [pwnable.tw](https://pwnable.tw)
 * [Exploit Excercises - Protostar](https://exploit-exercises.com/protostar/)
+
 
 
 ## Intro Binary
@@ -122,6 +125,7 @@ int main(){
 #### Disassembly (cont.)
 
 ![binja_main](binaryninja.png)
+
 
 
 ## Your First Exploit
