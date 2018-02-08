@@ -78,10 +78,16 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ### Pwndbg/Peda
 
-* Both free
+* Both free and OSS
 * Both do the same sort of dynamic analysis
 * Pwndbg is constantly developed, Peda inactive af
 
+
+### Pwntools
+
+* Free and OSS
+* Python woo
+* Makes exploit development a walk in the park
 
 
 ## Where to Practice?
