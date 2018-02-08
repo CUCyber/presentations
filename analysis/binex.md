@@ -357,8 +357,38 @@ python2 -c 'from pwn import *;print("A"*40+p64(0x55555555468a))'
 ## Binary 4
 
 
+### Binary 4
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define BUF_SIZE 32
+struct data { char buffer[BUF_SIZE]; };
+struct fp { void (*fp)(); };
+void flag(){ printf("You win!\n"); }
+void notFlag(){ printf("You don't win!\n"); }
+int main(int argc, char **argv){
+	struct data *d; struct fp *f;
+	d = malloc(sizeof(struct data));
+	f = malloc(sizeof(struct fp));
+	f->fp = notFlag;
+	strcpy(d->buffer, argv[1]), f->fp();
+}
+```
 
 
+### What is this called?
+
+
+### Heap-based Buffer Overflow!
+
+
+#### Same Concept to Exploit
+
+1. Find Padding
+2. Flag Addr as Exploit
+3. Exploit
 
 
 ## Questions
