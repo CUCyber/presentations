@@ -152,6 +152,7 @@ Strict outgoing filewall rules can protect your data and can help make privilege
 
 # Logging
 
+
 ## Logging
 
 * Turn it on
@@ -161,7 +162,7 @@ Strict outgoing filewall rules can protect your data and can help make privilege
 * Track changes
 
 
-## Make sure you're logging
+### Make sure you're logging
 
 Some services don't enable much or any logging at all.
 
@@ -172,7 +173,7 @@ Access logs are usually very important
 Note: Access logs for databases
 
 
-## syslogs
+### syslogs
 
 The place where your logs go!
 
@@ -188,7 +189,7 @@ Note:
 journalctl is a part of systemd
 
 
-## ELK Stack
+### ELK Stack
 
 * Elasticsearch, Logstash, and Kibana
 * Logstash: ingests data and transforms it. --> Sends to elasticsearch
@@ -196,4 +197,38 @@ journalctl is a part of systemd
 * Kibana: Lets you better visualize the data
 
 
-## Intrusion Detection Systems
+### Intrusion Detection Systems
+
+
+
+# Up-to-date Software
+
+
+## Keep Software Updated
+
+* Install security and application updates
+* Choose something stable
+
+
+### Install Security Updates
+
+* apt update
+* yum update
+* etc
+
+
+### Choose Something Stable
+
+* Choose a stable operating system
+* Something designed for server use like Debian, Ubuntu LTS Server, or CentOS
+* Don't run Arch (btw) on your servers
+* Major security updates are often backported to stable releases
+
+
+
+# Data Security
+
+
+## Encryption
+
+* 
