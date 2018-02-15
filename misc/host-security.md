@@ -26,6 +26,13 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 * Backups
 
 
+## What does this help?
+* Prevents unauthorized data access
+* Allows you to quickly and easily audit servers
+* Helps protect your servers against bad actors
+* Gives you a means to restore to a known-good system
+
+
 
 # Minimizing Services
 
@@ -102,6 +109,7 @@ Walk through man pages
 * Lock your bezels
 * Don't leave hardware laying around
 * Destroy harddrives after use
+* Make sure harddrives are encrypted at rest
 
 Note:
 Mention the physical security presentation and show a picture of bezels that lock
@@ -127,8 +135,9 @@ Knowing my pet's name doesn't help you guess my private key
 
 ### File Permissions
 
-
-### Encryption
+* Make sure permissions are correctly set up
+* Linux file permissions
+	- https://www.pluralsight.com/blog/it-ops/linux-file-permissions
 
 
 ### Firewalls
@@ -197,9 +206,6 @@ journalctl is a part of systemd
 * Kibana: Lets you better visualize the data
 
 
-### Intrusion Detection Systems
-
-
 
 # Up-to-date Software
 
@@ -229,6 +235,89 @@ journalctl is a part of systemd
 # Data Security
 
 
-## Encryption
+### Encryption
 
-* 
+* Full disk encryption
+* User passwords should be properly stored
+* As always, never try to roll your own
+
+
+### Online Payments
+
+Make sure you're following PCI regulations
+
+Things you cannot legally store:
+
+* Full mangnetic stripe or chip data
+* CVV
+* PIN
+
+
+### Mandatory Access Control
+
+* Confine processes's access to file and network resources
+* What you are allowed to touch and do as a program is explicitly defined
+
+Examples:
+* SELinux
+* AppArmor
+
+
+### Mandatory Access Control
+
+On desktop releases especially, MAC systems are usually very liberal
+
+For example, Firefox could be restricted to write to ~/FirefoxDownloads and read from ~/FirefoxUploads
+
+Sadly this would lead to most people disabling these systems
+
+Note:
+Joe will riot when he can't save his pictures to ~/Pictures
+
+
+
+# Backups
+
+
+### Times Backups are Useless
+
+* When your backup is not recent
+* When your backup is not exhaustive
+* When your backup is compromised
+* When your backup is not able to be restored
+
+Note:
+A compromised backup is corrupted or destroyed/also affected by the original issue
+
+Make sure to have multiple onsite and offsite backups
+
+
+### Hardware backups
+
+* Tape drive
+	- Linear data access
+	- No data deduplication
+	- Tape has a cheaper $/TB
+	- Requires additional hardware
+* Disk drive
+	- Performant random read and writes
+	- Coming down in price and up in capacity
+
+Note:
+* Has to copy data already store on the backup appliance
+* Tape drives themselves are pricey
+
+
+### Practice, Practice, Practice
+
+* Have a plan
+* Practice this plan
+
+
+### Practice, Practice, Practice
+
+If you can't prove that you can restore a backup then you may as well not take them at all
+
+
+
+# Questions?
