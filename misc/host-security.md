@@ -304,7 +304,7 @@ Make sure to have multiple onsite and offsite backups
 	- Coming down in price and up in capacity
 
 Note:
-* Has to copy data already store on the backup appliance
+* Has to copy data already stored on the backup appliance
 * Tape drives themselves are pricey
 
 
