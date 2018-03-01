@@ -16,6 +16,23 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## CCDC Recap
 
 
+## We Made It
+
+
+Clemson University, Kennesaw State University, Mercer University, University of Central Florida, University of Florida, University of North Carolina – Charlotte, University of North Carolina – Wilmington, University of South Alabama
+
+
+# Shoutout
+
+1. Weston Belk
+2. Kenneth Simpson
+3. Andrew Samuels
+4. Max Harley
+5. Carson Sallis
+6. David Houston
+7. Kyle Wolfe
+
+
 ### Wat
 
 
@@ -23,6 +40,15 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 ![isestart2](isestart2.png)
+
+
+![isestart3](isestart3.png)
+
+
+## Papa Bless
+
+![unluckystart1](unluckystart1.png)
+![unluckystart2](unluckystart2.png)
 
 
 ## Network Topology
@@ -93,3 +119,33 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 ![orgchart5](orgchart5.png)
+
+
+### Me
+
+
+#### What we did well
+
+1. Worked as a team
+2. Communicated well
+3. Got injects in!!!
+
+
+#### What we did not do well
+
+1. Negative service uptime
+2. Injects were laaaate
+
+
+### Linux
+
+1. Cut our losses on the CentOS box and wiped it
+2. Got a service up! Woo mailserver!
+3. No major compromises...? Maybe?
+
+
+#### Windows
+
+1. 
+2. 
+3. 
