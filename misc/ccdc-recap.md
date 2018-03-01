@@ -127,8 +127,7 @@ Clemson University, Kennesaw State University, Mercer University, University of 
 #### What we did well
 
 1. Worked as a team
-2. Communicated well
-3. Got injects in!!!
+2. Got injects in!!!
 
 
 #### What we did not do well
@@ -139,13 +138,35 @@ Clemson University, Kennesaw State University, Mercer University, University of 
 
 ### Linux
 
+
+#### Things we did well
+
 1. Cut our losses on the CentOS box and wiped it
 2. Got a service up! Woo mailserver!
 3. No major compromises...? Maybe?
 
 
-#### Windows
+#### Things we did not do well
 
-1. 
-2. 
-3. 
+1. Get services up
+2. Configure boxes quickly
+
+
+### Windows
+
+
+#### Things we did well
+
+1. Turned off Windows Server 2003
+2. Kept Server 2012 box working for injects
+3. Restarting AD
+
+
+#### Things we did not do well
+
+1. Restarting AD
+2. Communication with Nick
+3. Non-DNS DNS configuration
+4. Shut down Windows 2012 Server
+5. Playbook that does not require scripting
+6. Put service config in playbook
