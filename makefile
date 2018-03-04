@@ -15,7 +15,9 @@ SOURCES!=find * \( -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -
 
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
-serve: all
+website: $(WEBSITE)$(ROOT)
+
+serve: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 	$(SERVE) $(OUTDIR)
 
 update: $(WEBSITE)$(ROOT)
@@ -46,4 +48,4 @@ $(OUTDIR)$(ROOT)reveal: reveal.js/lib/js/socket.io.js
 $(WEBSITE)$(ROOT): $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(ROOT)"
 
-.PHONY: all serve update clean
+.PHONY: all website serve update clean
