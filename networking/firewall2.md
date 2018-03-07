@@ -144,14 +144,27 @@ It has the highest metric so that it is not chosen for internal packets
 
 ## Source Translation
 
+* Changes the source address of a packet
+* Can make a packet from 10.0.0.3 appear as though it is coming from 10.0.0.5
+* Simple rewrite after routing
+
 
 ## Destination Translation
 
+* Changes the destination address of a packet
+* Can make a packet going to 10.0.0.3 instead go to 10.0.0.5
+* Simple rewrite before routing
 
-## Both
+
+## NAPT
+
+* Network Address and Port Translation
+* A type of translation where multiple addresses are multiplexed behind a single address
+* Can make a packet from 10.0.0.4 go to 130.127.255.250 and back without 130.127.255.250 knowing the actual source address
 
 
-## Network Address and Port Translation (NAPT)
+* Does source translation so that source address is that of the router
+* Adds routes based on addresses and ports of connection to allow those packets to get back to the original host
 
 
 
@@ -201,6 +214,8 @@ Note:
 
 ## Separation
 
+TODO
+
 
 
 # Virtual LAN (VLAN)
@@ -208,8 +223,16 @@ Note:
 
 ## Tagging
 
+* Packets in a virtual LAN are tagged at layer 2 between the hosts
+* Allows supportive hardware to use this extra information to route and rule packets
+* Security relies on trusting the lines which are tagged
+
 
 ## Configuring
+
+* Generally configured in the switch and firewall
+* Hosts can configure VLANs too, for example if they are hosting VMs
+* Assign tags to interfaces (physical or virtual) and add routing and rules between them in the switch or firewall
 
 
 
@@ -224,20 +247,42 @@ Rules are the fundamental access control mechanism in a firewall. They decide wh
 ## Examples
 
 
+```
+TODO
+```
+
+
 
 # Deep Packet Inspection (DPI)
 
 
+## DPI
+
+* In DPI routers look at the whole packet instead of just the relevant layer 3 header
+* Many commercial firewall solutions, e.g. Palo Alto, have this feature
+
+
 ## Monitoring
+
+* Use in monitoring to understand trends between what the packets are doing
+* Examples are getting fields from HTTP headers or reporting versions used in TLS handshakes
 
 
 ## Intrusion Detection (IDS)
 
+* Use in intrusion detection by either detecting signatures or anomalies
+* Packet capture or metadata kept can be used later for manually finding an intrusion
+
 
 ## Malware Detection
 
+* Use in malware detection via known malware signatures or methods of delivery
+
 
 ## App-ID
+
+* Use in creating rules based on the detected application
+* E.g. allow actual MySQL data on a port instead of TLS data
 
 
 
@@ -246,8 +291,15 @@ Rules are the fundamental access control mechanism in a firewall. They decide wh
 
 ## Site-To-Site
 
+* Connects two disjoint networks via a gateway
+* Usually configured in the routers allowing it to send packets between the networks transparently
+* Layer 2 or layer 3
+
 
 ## Remote Access
+
+* Connecting to a remote network and accessing the hosts
+* Layer 2 or layer 3
 
 
 
