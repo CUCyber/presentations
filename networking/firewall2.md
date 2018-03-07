@@ -214,7 +214,8 @@ Note:
 
 ## Separation
 
-TODO
+* Separation requires packets between them to go through firewall
+* Generally physically separated onto different ports on the firewall
 
 
 
@@ -248,7 +249,13 @@ Rules are the fundamental access control mechanism in a firewall. They decide wh
 
 
 ```
-TODO
+allow from external to 10.0.0.4 proto tcp port 22
+
+allow from 10.0.1.0/24 to 10.0.0.5 proto tcp port 3306
+
+allow from internal to external proto tcp port 80
+allow from internal to external proto tcp port 443
+allow from internal to external proto tcp port 587
 ```
 
 
