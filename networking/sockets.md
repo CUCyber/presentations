@@ -103,6 +103,7 @@ if ((res = getaddrinfo(NULL, "3490", &hints, &servinfo)) != 0){
 freeaddrinfo(servinfo); // free the linked-list
 ```
 
+
 #### getaddrinfo
 
 * AF_UNSPEC for IPv4 or IPv6
