@@ -5,7 +5,6 @@ By: Nick Bulischeck, Kyle Wolfe
 CU Cyber
 
 
-
 ## You Can Find These Presentations Online
 
 Visit [cucyber.net](https://cucyber.net/) to find these presentations and more online!
