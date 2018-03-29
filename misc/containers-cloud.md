@@ -42,13 +42,32 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Docker
 
+* Open platform for developing, shipping, and running applications
+* Primarily developed for Linux
+* High-level API to provide lightweight containers that run processes in isolation
+
 
 ### Docker Architecture
 
 ![architecture](architecture.svg)
 
 
-### Docker-compose 
+### Docker-compose
+
+![docker-compose](docker-compose.png)
+
+* Used to run multi-container Docker applications
+* Uses YAML files for configuration
+* Bring entire projects up/down simultaneously
+
+
+### Short Demo
+
+```Bash
+git clone https://github.com/nbulischeck/dctf.git
+cd dctf
+sudo python ctf.py -bus
+```
 
 
 ## AWS Stuff
