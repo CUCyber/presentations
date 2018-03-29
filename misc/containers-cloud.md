@@ -107,6 +107,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ### Docker Swarm
 
+* Multiple docker hosts run in **swarm mode** act as managers and workers
 * 
 
 
