@@ -13,7 +13,10 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 
-## What is a Container?
+## Containers
+
+
+### What is a Container?
 
 * Abstraction at the application layer
 * Multiple containers can run on the same machine and share the kernel
@@ -33,11 +36,12 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ![vm](vm.png) 
 
 
-## What types of containers are there?
+### What types of containers are there?
 
 * Docker
 * LXC
 * FreeBSD Jails
+
 
 
 ## Docker
@@ -68,6 +72,7 @@ git clone https://github.com/nbulischeck/dctf.git
 cd dctf
 sudo python ctf.py -bus
 ```
+
 
 
 ## AWS Stuff
