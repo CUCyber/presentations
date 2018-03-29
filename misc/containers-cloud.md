@@ -1,8 +1,9 @@
 # Containers and the Cloud 
 
-By: Nick Bulischeck
+By: Nick Bulischeck, Kyle Wolfe
 
 CU Cyber
+
 
 
 ## You Can Find These Presentations Online
@@ -124,6 +125,28 @@ sudo python ctf.py -bus
 
 
 
-## AWS Stuff
+## AWS
 
 
+### What is AWS?
+
+AWS is a cloud computing, storage, and hosting service
+
+
+### Who uses AWS?
+
+* MLB
+* GE
+* Pinterest
+
+
+### Why the cloud?
+
+* no upfront costs
+* no server purchasing decisions
+* quickly scalable
+* no server maintenance
+* worldwide presence
+
+
+## AWS demo
