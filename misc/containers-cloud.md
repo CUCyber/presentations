@@ -108,7 +108,10 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ### Docker Swarm
 
 * Multiple docker hosts run in **swarm mode** act as managers and workers
-* 
+* If a worker node becomes unavailable, tasks are distributed elsewhere
+* Modify service configuration without the need to manually restart
+* Submit service definitions to manager nodes who distribute units of work
+* Units of work called tasks given to worker nodes
 
 
 ### Short Demo
