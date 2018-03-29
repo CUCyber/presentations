@@ -56,13 +56,58 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ![architecture](architecture.svg)
 
 
-### Docker-compose
+### Docker Objects
+
+* Images
+* Containers
+
+
+#### Docker Images
+
+* Read-only template with instructions for creating a container
+* Images are often *based* on another image w/ some changes
+* For example, image based on Ubuntu installs Apache w/ configs
+* Dockerfiles 
+
+
+#### Docker Containers
+
+* Runnable instance of an image
+* Create, start, stop, move, or delete containers using the API
+
+
+### Docker Commands
+
+* man docker-run
+* docker ps -a
+* docker images
+* docker stop $(docker ps -aq)
+* docker rm --force $(docker ps -aq)
+* docker rmi --force $(docker images -aq)
+* docker run -it ubuntu /bin/bash
+
+
+### Docker Registries
+
+* Docker registries store Docker images
+* docker pull OR docker run
+* docker push
+* Docker Hub - https://hub.docker.com/
+* Docker Cloud - https://cloud.docker.com/
+
+
+### Docker Compose
 
 ![docker-compose](docker-compose.png)
 
 * Used to run multi-container Docker applications
 * Uses YAML files for configuration
 * Bring entire projects up/down simultaneously
+
+
+### Docker Swarm
+
+* 
 
 
 ### Short Demo
