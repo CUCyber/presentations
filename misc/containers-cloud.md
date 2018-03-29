@@ -15,8 +15,42 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## What is a Container?
 
-## How is it different from a VM?
+* Abstraction at the application layer
+* Multiple containers can run on the same machine and share the kernel
+* Isolated processes in user space
+
+
+### How is it different from a VM?
+
+* VMs abstract physical hardware
+* Containers take up far less space
+* Containers can start nearly instantly
+
+
+![container](container.png)
+
+
+![vm](vm.png) 
+
 
 ## What types of containers are there?
 
+* Docker
+* LXC
+* FreeBSD Jails
+
+
+## Docker
+
+
+### Docker Architecture
+
+![architecture](architecture.svg)
+
+
+### Docker-compose 
+
+
 ## AWS Stuff
+
+
