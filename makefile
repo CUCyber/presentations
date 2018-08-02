@@ -38,7 +38,7 @@ $(OUTDIR)$(ROOT): $(SOURCES)
 
 reveal.js/lib/js/socket.io.js:
 	git submodule update --init --recursive
-	wget -O reveal.js/lib/js/socket.io.js https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js
+	wget -O reveal.js/lib/js/socket.io.js https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js
 
 $(OUTDIR)$(ROOT)reveal: reveal.js/lib/js/socket.io.js
 	mkdir -p "$(OUTDIR)$(ROOT)"reveal
