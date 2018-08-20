@@ -19,15 +19,15 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ### President
 
 
-## Weston Belk
+## Max Harley
 ### Vice President
 
 
-## Foster McLane
-### Level 5 Tech Support
+## Weston Belk
+### System Administration
 
 
-## Andrew Samuels
+## Cameron Ogle
 ### Secretary
 
 
@@ -57,8 +57,8 @@ The protection of computer systems from the theft or damage to their hardware, s
 
 * Give weekly presentations on informational topics
 * Cover both cyber offensive and defensive tactics
-* Attend competitions (CCDC, PCDC)
-* Hold CTF events (SittingDuck, Max's CTF)
+* Attend competitions (CCDC, PCDC, CPTC)
+* Hold CTF events (SittingDuck, Max's CTF, Nick's CTF, CUCTF)
 
 
 #### Tentative Weekly Presentation Schedule
@@ -68,24 +68,24 @@ The following is subject to change
 
 #### Tentative Weekly Presentation Schedule
 
-* 8/31  Intro to CU Cyber and Cyber Security
-* 9/7   Intro to Linux
-* 9/14  Intro to Networking
-* 9/21  Pi Hole
-* 9/28  Intro to Information Gathering
-* 10/5  Bettercap
-* 10/12 Metasploit
+* 8/30  Intro to CU Cyber and Summer Internship Presentations
+* 9/6   Intro to Burp Suite and the CU Cyber Lab
+* 9/13  Sitting Duck CTF
+* 9/20  Intro to Linux and Sitting Duck Review
+* 9/27  Intro to Networking and Information Gathering
+* 10/4  Metasploit and Metasploitable
+* 10/11 Intro to CTFs
 
 
 #### Tentative Weekly Presentation Schedule
 
-* 10/19 Advanced Networking
-* 10/26 Social Engineering (OSINT)
-* 11/2  Firewalls
-* 11/9  Burpsuite/MITM
-* 11/16 SittingDuck CTF
-* 11/24 No Meeting - Thanksgiving Break
-* 11/30 Final Meeting - People's Favorite Tools
+* 10/18 SAS (TBD)
+* 10/25 Intro to Malware
+* 11/1  Social Engineering
+* 11/8  Intro to Reverse Engineering and PwnDbg
+* 11/15 Corporate Presentation Slot (TBD)
+* 11/22 Thanksgiving Break - No Meeting
+* 11/30 Final Presentation (TBD)
 
 
 ## Ultimate Goal
@@ -96,16 +96,16 @@ Our goal is to leave you with the knowledge and experience to go into a professi
 
 #### When and Where
 
-Every Thursday at 7pm in the Watt Family Innovation Center room 313.
+Every Thursday at 7pm at the Watt Family Innovation Center in Room 313.
 
 An email with the exact meeting place and topic will be sent out a day before and we will @everyone on discord an hour or two before.
 
 
 ## Blackbaud
 
-Blackbaud is coming to give a talk on Wednesday, September 6th at 5:30.
+Blackbaud is coming to give a talk on Tuesday, August 28th at 7pm.
 
-This is a joint venture with ACM.
+This is a joint venture with ACM and ACM-W.
 
 Stay tuned to your emails for more information.
 
@@ -122,6 +122,39 @@ Stay tuned to your emails for more information.
 
 discord.gg/f7ZcC7z
 
+
+
+## Summer Internships
+
+
+### National Security Agency
+
+![NSA](nsa.png)
+
+
+### Soteria
+
+![Soteria](soteria.png)
+
+
+### Boeing
+
+![Boeing](boeing.png)
+
+
+### MetLife
+
+![MetLife](metlife.png)
+
+
+### SAS
+
+![SAS](sas.png)
+
+
+### Clemson Security Operations Center
+
+![Clemson SOC](clemson-soc.png)
 
 
 # Questions?
