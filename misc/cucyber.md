@@ -19,24 +19,63 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ### President
 
 
+#### National Security Agency
+
+![NSA](nsa.png)
+
+
 ## Max Harley
 ### Vice President
+
+
+### Soteria
+
+![Soteria](soteria.png)
 
 
 ## Weston Belk
 ### System Administration
 
 
+### Boeing
+
+![Boeing](boeing.png)
+
+
 ## Cameron Ogle
 ### Secretary
+
+
+### MetLife
+
+![MetLife](metlife.jpg)
 
 
 ## Kyle Wolfe
 ### Treasurer
 
 
+### DHS
+
+![DHS](dhs.png)
+
+
 ## Kenneth Simpson
 ### Webmaster
+
+
+### SAS
+
+![SAS](sas.png)
+
+
+## Foster McLane
+### Faculty Advisor
+
+
+### Clemson Security Operations Center
+
+![Clemson SOC](clemson-soc.png)
 
 
 ## Our Website
@@ -68,7 +107,7 @@ The following is subject to change
 
 #### Tentative Weekly Presentation Schedule
 
-* 8/30  Intro to CU Cyber and Summer Internship Presentations
+* 8/30  Intro to CU Cyber
 * 9/6   Intro to Burp Suite and the CU Cyber Lab
 * 9/13  Sitting Duck CTF
 * 9/20  Intro to Linux and Sitting Duck Review
@@ -111,6 +150,17 @@ Stay tuned to your emails for more information.
 
 
 
+### Dues
+
+1. $15 for the year
+2. Get your own network on the lab
+3. Ability to request up to 3 VMs to be created
+4. Ability to admin your created VM
+5. Ability to be on the competition team
+6. Possible future benefits
+
+
+
 ### Ethics
 
 1. Confidential vulnerability reporting
@@ -121,40 +171,6 @@ Stay tuned to your emails for more information.
 ### Discord
 
 discord.gg/f7ZcC7z
-
-
-
-## Summer Internships
-
-
-### National Security Agency
-
-![NSA](nsa.png)
-
-
-### Soteria
-
-![Soteria](soteria.png)
-
-
-### Boeing
-
-![Boeing](boeing.png)
-
-
-### MetLife
-
-![MetLife](metlife.png)
-
-
-### SAS
-
-![SAS](sas.png)
-
-
-### Clemson Security Operations Center
-
-![Clemson SOC](clemson-soc.png)
 
 
 # Questions?
