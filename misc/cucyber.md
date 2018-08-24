@@ -150,7 +150,7 @@ Stay tuned to your emails for more information.
 
 
 
-### Dues
+### Dues (OPTIONAL)
 
 1. $15 for the year
 2. Get your own network on the lab
