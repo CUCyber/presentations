@@ -70,7 +70,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 ## Foster McLane
-### Faculty Advisor
+### Staff Advisor
 
 
 ### Clemson Security Operations Center
