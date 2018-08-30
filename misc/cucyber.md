@@ -140,14 +140,11 @@ Every Thursday at 7pm at the Watt Family Innovation Center in Room 313.
 An email with the exact meeting place and topic will be sent out a day before and we will @everyone on discord an hour or two before.
 
 
-## Blackbaud
+## CTF Practice
 
-Blackbaud is coming to give a talk on Tuesday, August 28th at 7pm.
-
-This is a joint venture with ACM and ACM-W.
-
-Stay tuned to your emails for more information.
-
+* 8/31/2018
+* 8:00 pm
+* McAdams Computer Lab
 
 
 ### Dues (OPTIONAL)
