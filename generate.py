@@ -29,7 +29,8 @@ def generate(input_file, reveal_id, resource_dir, template, root_dir, output_dir
             title = title.strip()
 
             if title[0] == '#':
-                title = title[1:]
+                title = title.lstrip('#')
+                title = title.strip()
 
             title = title.strip()
 
