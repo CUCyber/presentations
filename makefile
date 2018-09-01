@@ -4,10 +4,10 @@ OUTDIR=public
 ROOT=/presentations/
 
 THEME=blood
-TEMPLATE=./template.html
+TEMPLATE=template.html
 
-GENERATE=./generate.py
-SERVE=./serve.py
+GENERATE=generate.py
+SERVE=serve.py
 
 WEBSITE=../website
 
@@ -18,7 +18,7 @@ all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 website: $(WEBSITE)$(ROOT)
 
 serve: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
-	$(SERVE) $(OUTDIR)
+	./$(SERVE) $(OUTDIR)
 
 update: $(WEBSITE)$(ROOT)
 	git -C "$(WEBSITE)" add ".$(ROOT)"
@@ -47,5 +47,6 @@ $(OUTDIR)$(ROOT)reveal: reveal.js/lib/js/socket.io.js
 
 $(WEBSITE)$(ROOT): $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(ROOT)"
+	touch "$(WEBSITE)$(ROOT)"
 
 .PHONY: all website serve update clean
