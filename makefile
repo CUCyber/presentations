@@ -36,11 +36,14 @@ $(OUTDIR)$(ROOT): $(SOURCES)
 	done
 	touch "$(OUTDIR)$(ROOT)"
 
-reveal.js/lib/js/socket.io.js:
+reveal.js/package.json:
 	git submodule update --init --recursive
-	wget -O reveal.js/lib/js/socket.io.js https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js
 
-$(OUTDIR)$(ROOT)reveal: reveal.js/lib/js/socket.io.js
+$(OUTDIR)$(ROOT)reveal/lib/js/socket.io.js:
+	mkdir -p "$(OUTDIR)$(ROOT)"reveal/lib/js
+	wget -O $(OUTDIR)$(ROOT)reveal/lib/js/socket.io.js https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js
+
+$(OUTDIR)$(ROOT)reveal: reveal.js/package.json $(OUTDIR)$(ROOT)reveal/lib/js/socket.io.js
 	mkdir -p "$(OUTDIR)$(ROOT)"reveal
 	rsync -av --delete reveal.js/{css,js,lib,plugin} "$(OUTDIR)$(ROOT)"reveal
 	touch "$(OUTDIR)$(ROOT)"reveal
