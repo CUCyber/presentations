@@ -29,7 +29,7 @@
 			}};
 
 			multiplex['enabled'] = multiplex['id'] != multiplex['secret'];
-			showNotes = !(multiplex['id'] || multiplex['secret']);
+			showNotes = !(multiplex['id'] || multiplex['secret'] || window.location.search.match(/present/gi));
 		</script>
 
 		<!--[if lt IE 9]>
