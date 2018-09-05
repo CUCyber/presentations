@@ -135,7 +135,7 @@ Our goal is to leave you with the knowledge and experience to go into a professi
 
 #### When and Where
 
-Every Thursday at 7pm at the Watt Family Innovation Center in Room 313.
+Every Thursday at 7pm at the Watt Family Innovation Center in Room 106.
 
 An email with the exact meeting place and topic will be sent out a day before and we will @everyone on discord an hour or two before.
 
