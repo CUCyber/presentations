@@ -25,7 +25,6 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Network Models
 
-* TCP/IP
 * OSI
 * TCP vs. UDP
 
@@ -38,8 +37,10 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ## Core Network Protocols
 
-* Domain Name System (DNS)
 * Address Resolution Protocol (ARP)
+* Dynamic Host Configuration Protocol (DHCP)
+* Internet Control Message Protocol (ICMP)
+* Domain Name System (DNS)
 
 
 ## Tools
@@ -58,20 +59,20 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ### IP - Internet Protocol
 
-* a suite of protocols for identification and addressing of connected computers
+* A suite of protocols for identification and addressing of connected computers
 
-* subnet - a block of IP space
+* Subnet - a block of IP space
 
 
 #### IPv4 - IP Version 4
 
-* has a 32-bit address block (4 billion addresses)
-* private and public addresses
+* Has a 32-bit address block (4 billion addresses)
+* Private and public addresses
 	- private - 192.168.1.1
 	- public - 130.127.151.120
 
 Note:
-We've run out of IPv4 addresses because they were handed out in large blocks. We use black magic (a.k.a. NAT) to keep everything working.
+We've run out of IPv4 addresses because they were handed out in large blocks. We use black magic (a.k.a. NAT/NAPT) to keep everything working.
 
 
 #### IPv6 - IP Version 6
@@ -85,13 +86,13 @@ IPv6 address space is larger than visible stars in the universe. Explain double 
 
 ### Ports
 
-* port - a number that designates a communication channel
-* service - a long running application that listens on a particular address and port
+* Port - a number that designates a communication channel
+* Service - a long running application that listens on a particular address and port
 
 
 ### Notations
 
-* subnet mask notation - 255.255.255.0
+* Subnet mask notation - 255.255.255.0
 * CIDR notation - 0.0.0.0/24
 
 Note:
@@ -113,44 +114,38 @@ Note:
 Encapsulation is key here! Every layer is enveloped by the lower layer.
 
 
-## TCP/IP Model
-
-* Layer 1 - Network Interface Layer
-* Layer 2 - Internet Layer
-* Layer 3 - Transport Layer
-* Layer 4 - Application Layer
-
-
 ## OSI Model
 
 
 ### Layer 2 - Data Link Layer
 
-* responsibilities
-	- getting data to the physical layer (i.e. ethernet cat-6 cabling)
-	- error detection
-	- hardware addressing (i.e. framing)
+* Responsibilities
+	- Getting data to the physical layer (i.e. ethernet cat-6 cabling) - raw bits sent over the wire
+	- Error detection
+	- Hardware addressing (i.e. framing)
+* Grouping of data is called frames
+* Uses local addresses to communicate
 
 
 #### Media Access Control (MAC) Sublayer
 
-* defines MAC addresses
-* controls access to network media (e.g. network drive)
+* Defines MAC addresses
+* Controls access to network media (e.g. network drive)
 
 
 #### Local Link Control (LLC) Sublayer
 
-* does error and flow control
-* handles layer 2 congestion
+* Does error and flow control
+* Handles layer 2 congestion
 
 
 ### Layer 3 - TCP/IP Layer
 
-* responsibilities
-	- routing
-* can send arbitrary data
-* grouping of data is called packets
-* uses addresses to communicate
+* Responsibilities
+	- Routing
+* Can send arbitrary data
+* Grouping of data is called packets
+* Uses global addresses to communicate
 
 Note:
 * Route selection finds the "best" path, not necessarily the shortest path.
@@ -160,15 +155,15 @@ Note:
 
 ### Layer 4 - Transport Layer
 
-* responsibilities
-	- error detection
+* Responsibilities
+	- Error detection
 * TCP & UDP
 
 
 ### Layer 7 - Application Layer
 
-* responsibilities
-	- takes requests from users and applications to lower layers (sender side)
+* Responsibilities
+	- Communicating data and metadata between applications
 
 Note:
 * Sender works from top down; receiver works from bottom up.
@@ -180,10 +175,10 @@ Note:
 
 ### TCP - Transmission Control Protocol
 
-* connection-oriented protocol
-	- three-way handshake
-* stream based
-* increased network overhead
+* Connection-oriented protocol
+	- Three-way handshake
+* Stream based
+* Increased network overhead
 
 Note:
 * TCP "guarantees" delivery of information.
@@ -194,10 +189,10 @@ Note:
 
 ### UDP - User Datagram Protocol
 
-* connectionless
-* message based
-	- "fire and forget"
-* realtime and orderless
+* Connectionless
+* Message based
+	- "Fire and forget"
+* Realtime and orderless
 
 Note:
 * UDP is a connectionless protocol.
@@ -211,11 +206,11 @@ Note:
 
 ## Routing
 
-* routers know how to forward packets to another network or within its local area network (LAN)
-* your default gateway is where your computer sends its packets
+* Routers know how to forward packets to another network or within its local area network (LAN)
+* Your default gateway is where your computer sends its packets that go out to the internet or larger subnet
 
 Note:
-* That other network is almost always a wide area network (WAN)
+* That other network is almost always a wide area network (WAN).
 * Show 'ip route' output.
 
 
@@ -224,13 +219,13 @@ Note:
 
 ### Home
 
-* cable box is generally your default gateway in a home network
+* Cable box is generally your default gateway in a home network
 
 
 ### Enterprise
 
-* have multiple default gateways for spatial locality of routing and for subnetting
-* most of the routers do not directly route to the internet or even route the internet at all
+* Have multiple default gateways for spatial locality of routing and for subnetting
+* Most of the routers do not directly route to the internet or even route the internet at all
 
 Note:
 Most enterprise networks designates a subnet as a "closed circuit" to reduce attack surface of certain systems.
@@ -240,25 +235,48 @@ Most enterprise networks designates a subnet as a "closed circuit" to reduce att
 # Core Network Protocols
 
 
-## Domain Name System (DNS)
-
-* the internet equivalent of a phone book
-* knows how to go from google.com to 143.215.193.237
-* knows how to send email to gmail.com
-
-Note:
-For now, just remember that it can translate a human-readable form to an IP address that an application can use to connect to another computer.
-
-
 ## Address Resolution Protocol (ARP)
 
-* resolves IP addresses into MAC addresses
-* entries are cached on your local system and any network equipment between the connection
-* a layer 2 protocol
+* Resolves IP addresses into MAC addresses
+* Entries are cached on your local system and any network equipment between the connection
+* A layer 2 protocol
+* Does not exist in IPv6
 
 Note:
 * When a system attempts to connect to another host. It uses the IP address to determine if it's on the local network (remember CIDR notation and subnetting). If so, it looks at the ARP cache to find the MAC address of the system and uses that to communicate. If the ARP table does not hold the IP address, your computer sends a broadcast message and a computer with that IP address may respond.
 * Use the 'ip neighbour' command to view your ARP cache.
+
+
+## Dynamic Host Configuration Protocol (DHCP)
+
+* Configures hosts with information on how to connect to and use the network
+* Includes default gateway, subnet information, and assigned address within the subnet
+* A UDP layer 7 protcol
+* A new protocol called DHCPv6 is used in IPv6
+
+Note:
+* Server subnets generally do not provide DHCP leases as IPs are statically assigned.
+
+
+## Internet Control Message Protocol (ICMP)
+
+* Signals errors and informational messages for IP
+* A layer 3 protocol extended from IP
+* A new protocol called ICMPv6 is used in IPv6
+
+Note:
+The ping command uses an ICMP echo request.
+
+
+## Domain Name System (DNS)
+
+* The internet equivalent of a phone book
+* Knows how to go from google.com to 143.215.193.237
+* Knows where to send email to gmail.com
+* A UDP layer 7 protcol
+
+Note:
+For now, just remember that it can translate a human-readable form to an IP address that an application can use to connect to another computer.
 
 
 
