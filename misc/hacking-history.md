@@ -83,6 +83,12 @@ Note:
 But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
 
 
+#### Wargames Phreaking
+
+Note:
+https://vimeo.com/groups/349208/videos/152524870#t=1h4m35s
+
+
 #### John Draper
 
 * ![Captain Crunch](captain-crunch.jpg)
