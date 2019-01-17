@@ -206,5 +206,9 @@ a deal offered by many websites and software developers by which individuals can
 * Square
 * Microsoft
 
+Note:
+https://hackerone.com/bug-bounty-programs
+https://www.bugcrowd.com/bug-bounty-list/
+
 
 #### Responsible Disclosure
