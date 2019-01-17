@@ -81,7 +81,6 @@ Carmille reprogrammed his machines to never punch information from Column 11 ont
 
 Note:
 But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
-https://vimeo.com/groups/349208/videos/152524870<Paste>
 
 
 #### Wargames Phreaking
@@ -227,12 +226,18 @@ https://www.bugcrowd.com/bug-bounty-list/
 
 ![DEFCON](dickhead.jpg)
 
+Note:
+* What do you all know about DEFCON?
+
 
 ### BlackHat
+
+![BlackHat](blackhat.jpg)
+
+* DEFCON, but for professionals
 
 
 ### Shmoocon
 
-
-
-
+* Washington DC
+* Limited tickets
