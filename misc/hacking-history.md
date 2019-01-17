@@ -68,18 +68,46 @@ Carmille reprogrammed his machines to never punch information from Column 11 ont
 ### MIT Tech Model Railroad Club
 
 * First reference to "hacking"
+* Mid-1950s meeting notes
+* Eventually lead to the discussion of telephone hackers years later
 
 
-### Morris Worm
+### Phone Phreaking
+
+* Exploring/exploiting the telephone system
+* Started late 1950s 
+* Golden age of late 1960s, early 1970s
+* Exploring the telephone network wasn't (and isn't) illegal, in and of itself
+
+Note:
+But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
+
+
+#### John Draper
+
+* ![Captain Crunch](captain-crunch.jpg)
+
+Note:
+This whistle emitted the same frequency that AT&T long lines used to indicate that a trunk line was available for routing a new call.
+
+
+### Morris Worm (1988)
 
 * Robert T. Morris
 * 23-Year-Old Grad Student from Cornell
+* Exploited known vulnerabilities in Unix sendmail, finger, and rsh/rexec, as well as weak passwords
+* Not written to cause damage, but to highlight security flaws
+
+
+#### Morris Worm Damage
+
+* The same computer could be infected multiple times leading to a fork bomb effect
 * Took down 10% of the Internet's computers at the time
+* U.S. Government Accountability Office put the cost of the damage at $100,000–10,000,000
 
 
-### ILOVEYOU
+### ILOVEYOU (2000)
 
-* May 5 2000
 * "LOVE-LETTER-FOR-YOU.txt.vbs"
 * Sent a copy of itself to all addresses in the Windows Address Book used by Microsoft Outlook
 * Philippines -> China -> Europe -> US
@@ -93,16 +121,26 @@ Carmille reprogrammed his machines to never punch information from Column 11 ont
 * The Pentagon, CIA, the British Parliament and most large corporations decided to completely shut down their mail system
 
 
+
 ## Modern Day Hacking
 
 
 ### Cyber Warfare
 
-* 
+
+#### Russo-Georgian War
+
+* August 5th 2008
+* Baku–Tbilisi–Ceyhan pipeline was subject to a terrorist attack near Refahiye in Turkey
+* Sophisticated computer attack on line's control and safety systems that led to increased pressure and explosion
+
 
 #### Stuxnet
 
-* 
+* Malicious worm first discovered in 2010
+* Targeted SCADA systems
+* Designed for PLCs in Iran's nuclear program
+* Exploited four zero-days in Windows
 
 
 ### Hacktivism
@@ -131,8 +169,18 @@ The dark web takedown was accomplished by compromising a private web hosting ser
 
 #### LulzSec
 
-* May 2011
+* Formed in May 2011
 * Five members of Anonymous
+* "Sabu," "Kayla," "T-Flow," "Topiary," "AVUnit," and "Pwnsauce"
+* Hacked HBGary, Fox Television, Tribune Company, PBS, Sony, Nintendo, and Senate.gov
+
+
+##### Lulzsec Downfall
+
+* Hector Monsegur (Sabu) logged into IRC without a proxy
+* FBI immediately had him, he folded fast
+* Eventually all of the other members were ratted out
+* "He’d do anything for his kids. He didn’t want to go away to prison and leave them. That’s how we got him."
 
 
 ### Bug Bounty Programs
