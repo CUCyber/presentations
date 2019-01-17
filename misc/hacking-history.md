@@ -81,6 +81,7 @@ Carmille reprogrammed his machines to never punch information from Column 11 ont
 
 Note:
 But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
+https://vimeo.com/groups/349208/videos/152524870<Paste>
 
 
 #### John Draper
@@ -212,3 +213,20 @@ https://www.bugcrowd.com/bug-bounty-list/
 
 
 #### Responsible Disclosure
+
+
+## Conferences
+
+### DEFCON
+
+![DEFCON](dickhead.jpg)
+
+
+### BlackHat
+
+
+### Shmoocon
+
+
+
+
