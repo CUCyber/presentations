@@ -2,7 +2,7 @@
 
 By: Nick Bulischeck, Max Harley, Weston Belk, Foster McLane, Cam Ogle
 
-CU Cyber (test)
+CU Cyber
 
 
 ## You Can Find These Presentations Online
