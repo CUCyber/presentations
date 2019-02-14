@@ -82,7 +82,7 @@ To clean out any generated files, run `make clean`.
 
 ## Presenting
 
-The presentations are easy enough to give, but can be improved by using speaker view. To pull up speaker view, press 's' from the presentation. This opens a page that includes a timer, speaker notes, and images of the current and next slides.
+The presentations are easy enough to give, but can be improved by using speaker view. To pull up speaker view, press 's' from the presentation. This opens a page that includes a timer, speaker notes, and images of the current and next slides. If not using the multiplex described below, add `?present` to the end of the URL to remove speaker notes from the shown slides.
 
 
 ### Multiplex
