@@ -40,7 +40,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## Network Topology
 
 
-![diagram](diagram.png)
+![diagram](diagram.png) <!-- .element height="100%" -->
 
 
 
@@ -49,29 +49,34 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 ### Mail Server
 
-![mailman](mailman-small.png)
+![mailman](mailman-small.png) <!-- .element height="100%" -->
 
 
 ### Database
 
-![database](database.png)
+![database](database.png) <!-- .element height="100%" -->
 
 
 ### Firewall
 
 When Red Team installs a rootkit in your firewall
 
-![rootkit](rootkit.png)
+![rootkit](rootkit.png) <!-- .element height="100%" -->
 
 
 ### Ecommerce Box
 
-![ecommerce](ecommerce.png)
+![ecommerce](ecom.png) <!-- .element height="100%" -->
 
 
 ### Palo Alto
 
-![cybersecurity-badass](cybersecurity-badass.png)
+![cybersecurity-badass](cybersecurity-badass.png) <!-- .element height="100%" -->
+
+
+### Red Team
+
+![red-team](red-team.jpg) <!-- .element height="100%" -->
 
 
 
