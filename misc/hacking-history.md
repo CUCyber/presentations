@@ -1,10 +1,6 @@
 # The History of Hacking
 
-<<<<<<< HEAD
 By: Nick Bulischeck, Max Harley, Weston Belk, Cameron Ogle, Foster McLane
-=======
-By: Nick Bulischeck, Max Harley, Weston Belk, Foster McLane, Cam Ogle
->>>>>>> 5c1e1268e1171e18c72ee1f2ec2589a9eec28460
 
 CU Cyber
 
