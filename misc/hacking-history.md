@@ -14,8 +14,6 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 
 ## The History of Hacking
-<<<<<<< HEAD
-=======
 
 
 ### The Definition of "Hacker"
@@ -243,4 +241,3 @@ Note:
 
 * Washington DC
 * Limited tickets
->>>>>>> 5c1e1268e1171e18c72ee1f2ec2589a9eec28460
