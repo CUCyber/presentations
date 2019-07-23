@@ -21,7 +21,39 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 1. an adherent of the technology and programming subculture
 2. someone who is able to subvert computer security
 
+### Secrets & Lies - Bruce Shneier
 
+* Defines Security in terms of Properties of Systems:
+	- Complex
+	- Interactive with Other Systems
+	- Emergent Properties
+	- Has "Bugs" - Bad Emergent Properties
+
+Note: 
+Emergent Properties: systems do things that are not anticipated by the user. Could be good or bad. "In philosophy, systems theory, science, and art, emergence occurs when "the whole is greater than the sum of the parts," meaning the whole has properties its parts do not have. These properties come about because of interactions among the parts " -Wikipedia
+
+# The Difficulty of Securing Systems
+
+* Proving System Security is attempting to prove a Null Hypothesis
+* Impossible to prove that a system is secure, only to prove that its insecure
+
+Note:
+A system being secure is based on a null hypothesis: its impossible to prove that a system is secure, its only possible to prove that its insecure. Just as in software testing in general, where its impossible to prove that a piece of code contains no bugs. Disproving the null hypothesis proves nothing; the best you can say about a system is that "noone has been able to prove that its insecure."
+
+
+# Computer Security
+
+* General Computer Security defined
+* 3 Aspects:
+	1. Confedentiality
+	2. Integrity
+	3. Availability
+
+Note:
+General Computer Security: "The prevention and/or detection of unauthorized actions by users of a computer System."
+Confidentiality: Stop unauth. users from reading sensitive info
+Integrity: Every piece of data is as the last authroizd modifier left it.
+Availability: The property that a prodyct's services are accessible when needed and without undue delay," or "the property of being accessible and usable upon demand by an authorized entity."
 
 ## Older than Old-School Hacking
 
@@ -46,7 +78,7 @@ This happened in June 1903 during a public demonstration by Marconi.
 ### Nazi Census
 
 * Nazis invaded France in 1940 and demanded a census
-* Census forms were compiled onto tabulator cards
+* Census forms were compiled onto tabulator cards supplied by IBM
 * Column 11 indicated the citizen's religion
 
 
@@ -70,6 +102,12 @@ Carmille reprogrammed his machines to never punch information from Column 11 ont
 * First reference to "hacking"
 * Mid-1950s meeting notes
 * Eventually lead to the discussion of telephone hackers years later
+* "mischief pulled off under a cloak of secrecy or misdirection"
+* http://hacks.mit.edu/Hacks/
+
+Note: 
+Documentation of MIT's more benign "hacks"
+https://www.youtube.com/watch?v=IAIPUGO1iko
 
 
 ### Phone Phreaking
