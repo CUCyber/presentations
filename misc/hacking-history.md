@@ -16,6 +16,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## The History of Hacking
 
 
+## Question: What is a Hacker?
+
+
 ### The Definition of "Hacker"
 
 1. an adherent of the technology and programming subculture
