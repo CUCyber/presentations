@@ -21,6 +21,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 1. an adherent of the technology and programming subculture
 2. someone who is able to subvert computer security
 
+
 ### Secrets & Lies - Bruce Shneier
 
 * Defines Security in terms of Properties of Systems:
@@ -31,6 +32,7 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 
 Note: 
 Emergent Properties: systems do things that are not anticipated by the user. Could be good or bad. "In philosophy, systems theory, science, and art, emergence occurs when "the whole is greater than the sum of the parts," meaning the whole has properties its parts do not have. These properties come about because of interactions among the parts " -Wikipedia
+
 
 # The Difficulty of Securing Systems
 
@@ -54,6 +56,8 @@ General Computer Security: "The prevention and/or detection of unauthorized acti
 Confidentiality: Stop unauth. users from reading sensitive info
 Integrity: Every piece of data is as the last authroizd modifier left it.
 Availability: The property that a prodyct's services are accessible when needed and without undue delay," or "the property of being accessible and usable upon demand by an authorized entity."
+
+
 
 ## Older than Old-School Hacking
 
@@ -185,6 +189,7 @@ This whistle emitted the same frequency that AT&T long lines used to indicate th
 * Targeted SCADA systems
 * Designed for PLCs in Iran's nuclear program
 * Exploited four zero-days in Windows
+* Excellent documentary "zero days"
 
 
 ### Hacktivism
@@ -258,7 +263,9 @@ https://www.bugcrowd.com/bug-bounty-list/
 #### Responsible Disclosure
 
 
+
 ## Conferences
+
 
 ### DEFCON
 
