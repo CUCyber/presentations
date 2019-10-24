@@ -129,6 +129,8 @@ https://www.youtube.com/watch?v=IAIPUGO1iko
 
 Note:
 But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
+Actual Audio of Phreaking: Note the mechanical switching sounds
+https://www.youtube.com/watch?v=qNhChMiNSaw&t=30m1s
 
 
 #### Wargames Phreaking
