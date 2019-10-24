@@ -126,6 +126,7 @@ https://www.youtube.com/watch?v=IAIPUGO1iko
 * Started late 1950s 
 * Golden age of late 1960s, early 1970s
 * Exploring the telephone network wasn't (and isn't) illegal, in and of itself
+* Blue Box - emitted 2600 Hz tone, mimicing 
 
 Note:
 But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
@@ -221,7 +222,7 @@ The dark web takedown was accomplished by compromising a private web hosting ser
 * WikiLeaks was founded in 2006 by Julian Assange
 * "multi-national media organization and associated library"
 * Primarily associated with whistleblowing
-* Julian Assange currently resides in the Ecuadorian Embassy in London
+* Julian Assange currently has since been arrested and is in prison in London
 
 
 #### LulzSec
