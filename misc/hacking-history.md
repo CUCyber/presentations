@@ -21,6 +21,9 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 1. an adherent of the technology and programming subculture
 2. someone who is able to subvert computer security
 
+note: 
+* Ethical implications?
+
 
 ### Secrets & Lies - Bruce Shneier
 
@@ -34,7 +37,7 @@ Note:
 Emergent Properties: systems do things that are not anticipated by the user. Could be good or bad. "In philosophy, systems theory, science, and art, emergence occurs when "the whole is greater than the sum of the parts," meaning the whole has properties its parts do not have. These properties come about because of interactions among the parts " -Wikipedia
 
 
-# The Difficulty of Securing Systems
+### The Difficulty of Securing Systems
 
 * Proving System Security is attempting to prove a Null Hypothesis
 * Impossible to prove that a system is secure, only to prove that its insecure
@@ -43,7 +46,7 @@ Note:
 A system being secure is based on a null hypothesis: its impossible to prove that a system is secure, its only possible to prove that its insecure. Just as in software testing in general, where its impossible to prove that a piece of code contains no bugs. Disproving the null hypothesis proves nothing; the best you can say about a system is that "noone has been able to prove that its insecure."
 
 
-# Computer Security
+### Computer Security
 
 * General Computer Security defined
 * 3 Aspects:
