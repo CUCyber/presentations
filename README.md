@@ -55,7 +55,7 @@ $ sudo emerge dev-vcs/git dev-python/watchdog
 Requires [Homebrew](https://brew.sh/). Use `gmake` instead of `make`.
 
 ```sh
-$ brew install make git rsync python3
+$ brew install make git wget rsync python3
 $ pip3 install watchdog
 ```
 
