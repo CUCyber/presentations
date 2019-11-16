@@ -30,7 +30,6 @@ def generate(input_file, reveal_id, theme, resource_dir, multiplex_server, templ
 
             if title[0] == '#':
                 title = title.lstrip('#')
-                title = title.strip()
 
             title = title.strip()
 
