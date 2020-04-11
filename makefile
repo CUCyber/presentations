@@ -11,17 +11,18 @@ GENERATE=generate.py
 SERVE=serve.py
 
 WEBSITE=../website
+SITE=/_site
 
-SOURCES!=find * \( -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print
+SOURCES!=find * \( -path '*.res' -o -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print
 
 all: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 
-website: $(WEBSITE)$(ROOT)
+website: $(WEBSITE)$(SITE)$(ROOT)
 
 serve: $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
 	"./$(SERVE)" "$(OUTDIR)"
 
-update: $(WEBSITE)$(ROOT)
+update: $(WEBSITE)$(SITE)$(ROOT)
 	git -C "$(WEBSITE)" add ".$(ROOT)"
 	git -C "$(WEBSITE)" commit -m "update presentations"
 	git -C "$(WEBSITE)" push
@@ -50,8 +51,8 @@ $(OUTDIR)$(ROOT)reveal/lib/js/socket.io.js:
 
 $(OUTDIR)$(ROOT)reveal: reveal.js/package.json $(OUTDIR)$(ROOT)reveal/js/reveal.js $(OUTDIR)$(ROOT)reveal/lib/js/socket.io.js
 
-$(WEBSITE)$(ROOT): $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
-	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(ROOT)"
-	touch "$(WEBSITE)$(ROOT)"
+$(WEBSITE)$(SITE)$(ROOT): $(OUTDIR)$(ROOT) $(OUTDIR)$(ROOT)reveal
+	rsync -av --delete "$(OUTDIR)$(ROOT)" "$(WEBSITE)$(SITE)$(ROOT)"
+	touch "$(WEBSITE)$(SITE)$(ROOT)"
 
 .PHONY: all website serve update clean
