@@ -11,7 +11,7 @@ GENERATE=generate.py
 SERVE=serve.py
 
 WEBSITE=../website
-SITE=/_site
+SITE=
 
 SOURCES!=find * \( -path '*.res' -o -path 'reveal.js' -o -path "$(OUTDIR)" \) -prune -o -type f -name '*.md' -a -not \( -name 'LICENSE.md' -o -name 'README.md' \) -print
 
