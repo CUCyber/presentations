@@ -9,8 +9,8 @@ In this repository are the markdown sources to presentations given by CU Cyber. 
 * make
 * git
 * rsync
-* python
-* python-watchdog (optional; for automatic rebuilding on presentation change)
+* python3
+* python3-watchdog (optional; for automatic rebuilding on presentation change)
 
 
 ### Debian/Ubuntu/Kali
@@ -24,7 +24,7 @@ $ sudo apt install make git rsync python3 python3-watchdog
 
 ```sh
 $ sudo yum install epel-release
-$ sudo yum install make git rsync python34
+$ sudo yum install make git rsync python36
 $ sudo pip3 install watchdog
 ```
 

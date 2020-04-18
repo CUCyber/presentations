@@ -2,11 +2,7 @@
 import os
 import os.path
 import shutil
-
-try:
-    from urllib.parse import quote as urlquote
-except ImportError:
-    from urllib import quote as urlquote
+import urllib.parse
 
 
 def generate(input_file, reveal_id, theme, resource_dir, multiplex_server, template_file, root_dir, output_dir):
@@ -34,7 +30,7 @@ def generate(input_file, reveal_id, theme, resource_dir, multiplex_server, templ
             title = title.strip()
 
             # template given file
-            index.write(template.read().format(id=urlquote(reveal_id, safe=''), title=title, root=urlquote(root_dir), theme=theme, multiplex=multiplex_server, presentation=os.path.basename(input_file)))
+            index.write(template.read().format(id=urllib.parse.quote(reveal_id, safe=''), title=title, root=urllib.parse.quote(root_dir), theme=theme, multiplex=multiplex_server, presentation=os.path.basename(input_file)))
 
 
 if __name__ == '__main__':
