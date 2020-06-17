@@ -1,12 +1,15 @@
 # CU Cyber
 
+cucyber.net
+
 
 
 ## CU Cyber
 
 * Training
 * Competitions
-* Weekly Meetings
+* Weekly meetings
+* Social events
 
 
 
@@ -29,21 +32,12 @@
 
 
 
-### Weston Belk
+### David Houston
 
-<img src="weston.jpg" width="40%">
+<img src="david.jpg" width="40%">
 
 * Lab Administrator
-* Blue Team Training
-
-
-
-### Kyle Wolfe
-
-<img src="kyle.jpg" width="30%">
-
-* Treasurer
-* CU CTF
+* Competition and Event Lead
 
 
 
@@ -60,17 +54,23 @@
 
 <img src="matt.png" width="75%">
 
-* Web Administrator
-* Red Competition Team
+* Training Lead
 
 
 
-### David Houston
+### Sean Craffey
 
-![david](david.jpg)
+<img src="sean.png" width="75%">
 
-* Leadership
-* Operations Manager
+* Webmaster
+
+
+
+### Brianna Fuller
+
+<img src="brianna.png" width="75%">
+
+* Webmaster
 
 
 
@@ -82,12 +82,17 @@
 
 
 
+### ?
+
+* Treasurer
+
+
+
 ### Max Harley
 
 <img src="max.jpeg" width="30%">
 
 * President
-* Blue Competition Team
 
 
 
@@ -107,20 +112,39 @@
 
 * 2810/4810
 * Red team training
+* Weekend training
+
+
+
+## Weekend Training
+
+* Feb 1st and 2nd
+* Basics of web exploitation and host exploitation
+* Free food
 
 
 
 ## Competitions
 
-
-
-### Competition Cabal
-
-![cabal](cabal.png)
+* Cyberdefense competitions + CTFs
+* Looking for experts for CCDC
 
 
 
 ## Weekly Meetings
+
+* Thursdays at 7:00 PM in Watt 208
+* You're already here!
+
+
+
+## Social Events
+
+* Typically Fridays
+* CTF Night tomorrow in McAdams 110B
+
+Note:
+* Get Cam to give a small presentation
 
 
 
@@ -135,11 +159,9 @@
 
 
 
-## Leadership Opportunities
+## Open Leadership Opportunities
 
-* Educational video production
-* CTF Organizer
-* 2810/4810 Teacher
+* Treasurer
 
 
 
@@ -150,9 +172,15 @@
 
 
 
-## Next Meeting
+## Conclusion
 
-Sitting Duck
+* Training
+  * CPSC 2810/4810
+  * Red team training
+  * Weekend training
+* Competitions
+* Weekly meetings
+* Social events
 
 
 
