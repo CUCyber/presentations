@@ -23,7 +23,7 @@
 		<!-- multiplexing -->
 		<script>
 			var multiplex = {{
-				server: 'https://reveal.cucyber.net',
+				server: '{multiplex}',
 				secret: window.location.search.match(/master/gi) ? 'request' : null,
 				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
@@ -33,7 +33,7 @@
 		</script>
 
 		<!--[if lt IE 9]>
-			<script src="{root}lib/js/html5shiv.js"></script>
+			<script src="{root}reveal/lib/js/html5shiv.js"></script>
 		<![endif]-->
 
 		<!-- make h1 font size a little smaller -->
@@ -52,7 +52,6 @@
 		</div>
 
 		<!-- source and configure reveal.js -->
-		<script src="{root}reveal/lib/js/head.min.js"></script>
 		<script src="{root}reveal/js/reveal.js"></script>
 		<script>
 			var init = function() {{

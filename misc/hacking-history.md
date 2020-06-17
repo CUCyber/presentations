@@ -16,10 +16,17 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 ## The History of Hacking
 
 
+## Question: What is a Hacker?
+
+
 ### The Definition of "Hacker"
 
 1. an adherent of the technology and programming subculture
 2. someone who is able to subvert computer security
+
+note: 
+* Ethical implications?
+
 
 ### Secrets & Lies - Bruce Shneier
 
@@ -32,7 +39,8 @@ Visit [cucyber.net](https://cucyber.net/) to find these presentations and more o
 Note: 
 Emergent Properties: systems do things that are not anticipated by the user. Could be good or bad. "In philosophy, systems theory, science, and art, emergence occurs when "the whole is greater than the sum of the parts," meaning the whole has properties its parts do not have. These properties come about because of interactions among the parts " -Wikipedia
 
-# The Difficulty of Securing Systems
+
+### The Difficulty of Securing Systems
 
 * Proving System Security is attempting to prove a Null Hypothesis
 * Impossible to prove that a system is secure, only to prove that its insecure
@@ -41,7 +49,7 @@ Note:
 A system being secure is based on a null hypothesis: its impossible to prove that a system is secure, its only possible to prove that its insecure. Just as in software testing in general, where its impossible to prove that a piece of code contains no bugs. Disproving the null hypothesis proves nothing; the best you can say about a system is that "noone has been able to prove that its insecure."
 
 
-# Computer Security
+### Computer Security
 
 * General Computer Security defined
 * 3 Aspects:
@@ -54,6 +62,8 @@ General Computer Security: "The prevention and/or detection of unauthorized acti
 Confidentiality: Stop unauth. users from reading sensitive info
 Integrity: Every piece of data is as the last authroizd modifier left it.
 Availability: The property that a prodyct's services are accessible when needed and without undue delay," or "the property of being accessible and usable upon demand by an authorized entity."
+
+
 
 ## Older than Old-School Hacking
 
@@ -116,9 +126,12 @@ https://www.youtube.com/watch?v=IAIPUGO1iko
 * Started late 1950s 
 * Golden age of late 1960s, early 1970s
 * Exploring the telephone network wasn't (and isn't) illegal, in and of itself
+* Blue Box - emitted 2600 Hz tone, mimicing 
 
 Note:
 But phone phreaks sometimes used their skills to make free telephone calls, and that was illegal
+Actual Audio of Phreaking: Note the mechanical switching sounds
+https://www.youtube.com/watch?v=qNhChMiNSaw&t=30m1s
 
 
 #### Wargames Phreaking
@@ -185,6 +198,7 @@ This whistle emitted the same frequency that AT&T long lines used to indicate th
 * Targeted SCADA systems
 * Designed for PLCs in Iran's nuclear program
 * Exploited four zero-days in Windows
+* Excellent documentary "zero days"
 
 
 ### Hacktivism
@@ -208,7 +222,7 @@ The dark web takedown was accomplished by compromising a private web hosting ser
 * WikiLeaks was founded in 2006 by Julian Assange
 * "multi-national media organization and associated library"
 * Primarily associated with whistleblowing
-* Julian Assange currently resides in the Ecuadorian Embassy in London
+* Julian Assange currently has since been arrested and is in prison in London
 
 
 #### LulzSec
@@ -258,7 +272,9 @@ https://www.bugcrowd.com/bug-bounty-list/
 #### Responsible Disclosure
 
 
+
 ## Conferences
+
 
 ### DEFCON
 
