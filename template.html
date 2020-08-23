@@ -5,20 +5,12 @@
 
 		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="{root}reveal/css/reveal.css">
-		<link rel="stylesheet" href="{root}reveal/css/theme/{theme}.css">
+		<link rel="stylesheet" href="{root}reveal/reset.css">
+		<link rel="stylesheet" href="{root}reveal/reveal.css">
+		<link rel="stylesheet" href="{root}reveal/theme/{theme}.css">
 
 		<!-- theme for code highlighting -->
-		<link rel="stylesheet" href="{root}reveal/lib/css/zenburn.css">
-
-		<!-- printing from pdf -->
-		<script>
-			var link = document.createElement('link');
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match(/print-pdf/gi) ? '{root}reveal/css/print/pdf.css' : '{root}reveal/css/print/paper.css';
-			document.getElementsByTagName('head')[0].appendChild(link);
-		</script>
+		<link rel="stylesheet" href="{root}reveal/plugin/highlight/zenburn.css">
 
 		<!-- multiplexing -->
 		<script>
@@ -28,18 +20,18 @@
 				id: window.location.search.match(/receiver/gi) ? 'request' : null,
 			}};
 
-			multiplex['enabled'] = multiplex['id'] != multiplex['secret'];
-			showNotes = !(multiplex['id'] || multiplex['secret'] || window.location.search.match(/present/gi));
+			multiplex['enabled'] = multiplex['id'] !== multiplex['secret'];
+			var showNotes = !(multiplex['id'] || multiplex['secret'] || window.location.search.match(/present/gi));
 		</script>
-
-		<!--[if lt IE 9]>
-			<script src="{root}reveal/lib/js/html5shiv.js"></script>
-		<![endif]-->
 
 		<!-- make h1 font size a little smaller -->
 		<style>
 			.reveal h1 {{
 				font-size: 3.10em;
+			}}
+
+			.reveal .speaker-notes p {{
+					text-shadow: none;
 			}}
 		</style>
 	</head>
@@ -52,45 +44,40 @@
 		</div>
 
 		<!-- source and configure reveal.js -->
-		<script src="{root}reveal/js/reveal.js"></script>
+		<script src="{root}reveal/reveal.js"></script>
+		<script src="{root}reveal/plugin/markdown/markdown.js"></script>
+		<script src="{root}reveal/plugin/highlight/highlight.js"></script>
+		<script src="{root}reveal/plugin/zoom/zoom.js"></script>
+		<script src="{root}reveal/plugin/notes/notes.js"></script>
+		<script src="{root}reveal/plugin/math/math.js"></script>
 		<script>
 			var init = function() {{
-				// base dependencies
-				var dependencies = [
-					// classList shim
-					{{ src: '{root}reveal/lib/js/classList.js', condition: function() {{ return !document.body.classList; }} }},
+				// base plugins
+				var plugins = [
+						RevealMarkdown,
+						RevealHighlight,
+						RevealNotes,
+						RevealZoom,
+						RevealMath
+				];
 
-					// markdown
-					{{ src: '{root}reveal/plugin/markdown/marked.js', condition: function() {{ return !!document.querySelector('[data-markdown]'); }} }},
-					{{ src: '{root}reveal/plugin/markdown/markdown.js', condition: function() {{ return !!document.querySelector('[data-markdown]'); }} }},
-
-					// syntax highlight for <code> elements
-					{{ src: '{root}reveal/plugin/highlight/highlight.js', async: true, callback: function() {{ hljs.initHighlighting(); }} }},
-
-					// zoom in and out with alt+click
-					{{ src: '{root}reveal/plugin/zoom-js/zoom.js', async: true }},
-
-					// speaker notes
-					{{ src: '{root}reveal/plugin/notes/notes.js', async: true }},
-
-					// MathJax
-					{{ src: '{root}reveal/plugin/math/math.js', async: true }},
-				]
-
+				// potential dependencies
+				var dependencies = [];
 				if (multiplex['enabled']) {{
 					// multiplex
-					dependencies.push({{ src: '{root}reveal/lib/js/socket.io.js', async: true }});
+					dependencies.push({{ src: '{root}reveal/lib/socket/socket.io.js', async: true }});
 					if (multiplex['secret'] === null)
-						dependencies.push({{ src: '{root}reveal/plugin/multiplex/client.js', async: true }});
+						dependencies.push({{ src: '{root}reveal/ext/multiplex/client.js', async: true }});
 					else
-						dependencies.push({{ src: '{root}reveal/plugin/multiplex/master.js', async: true }});
+						dependencies.push({{ src: '{root}reveal/ext/multiplex/master.js', async: true }});
 				}}
 
 				// create reveal options
 				var reveal = {{
 					history: true,
-					dependencies: dependencies,
-				}}
+					plugins: plugins,
+					dependencies: dependencies
+				}};
 
 				if (multiplex['enabled']) {{
 					// add multiplex information

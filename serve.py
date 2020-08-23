@@ -1,17 +1,11 @@
 #!/usr/bin/env python3
-from __future__ import print_function
-
 import subprocess
 import sys
 import time
 import os
 
-try:
-    from http.server import SimpleHTTPRequestHandler
-    from http.server import HTTPServer
-except ImportError:
-    from SimpleHTTPServer import SimpleHTTPRequestHandler
-    from BaseHTTPServer import HTTPServer
+from http.server import SimpleHTTPRequestHandler
+from http.server import HTTPServer
 
 outdir = sys.argv[1]
 reldir = os.path.relpath('.', outdir)
@@ -24,7 +18,7 @@ try:
 
     class MakeHandler(PatternMatchingEventHandler):
         def __init__(self, interval):
-            PatternMatchingEventHandler.__init__(self, patterns=[os.path.join('*.res', '*'), '*.md'], ignore_patterns=[os.path.join(reldir, outdir, '*'), os.path.join('*', 'LICENSE.md'), os.path.join('*', 'README.md'), os.path.join('*', '.git', '*')], ignore_directories=True, case_sensitive=False)
+            PatternMatchingEventHandler.__init__(self, patterns=[os.path.join('*.res', '*'), '*.md'], ignore_patterns=[os.path.join(reldir, outdir, '*'), os.path.join('vendor', '*'), os.path.join('*', 'LICENSE.md'), os.path.join('*', 'README.md'), os.path.join('*', '.git', '*')], ignore_directories=True, case_sensitive=False)
             self.last = time.time()
             self.interval = interval
 
@@ -41,7 +35,7 @@ try:
     observer.schedule(MakeHandler(interval=1), reldir, recursive=True)
     observer.start()
 except ImportError:
-    pass
+    print('watchdog not found: automatic rebuild disabled')
 
 print('serving "{}" at http://localhost:8080/'.format(outdir))
 
